@@ -7,68 +7,30 @@ import HeaderLink from './HeaderLink.astro';
     <div class="left">
       <h2>
         <a href="/" aria-label="Home">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 100"
-            width="52"
-            height="52"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="54" height="54">
             <defs>
-              <!-- K 竖杠渐变：从很浅开始，往下变深，弱化第一眼冲击 -->
-              <linearGradient id="k-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%"   stop-color="#d0d0d0" />
-                <stop offset="40%"  stop-color="#a0a0a0" />
-                <stop offset="100%" stop-color="#444444" />
-              </linearGradient>
-
-              <!-- Q / 斜杠渐变：更柔和、偏冷灰 -->
-              <linearGradient id="q-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%"   stop-color="#c0c0c0" />
-                <stop offset="100%" stop-color="#888888" />
+              <linearGradient id="kq_metal_strong" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stop-color="#FFFFFF" />
+                <stop offset="45%"  stop-color="#A8A8A8" />
+                <stop offset="100%" stop-color="#555555" />
               </linearGradient>
             </defs>
 
-            <!-- K 主竖杠：渐变 + 稍细 + 上部模糊感 -->
-            <path
-              d="M 24 8 L 24 92"
-              stroke="url(#k-gradient)"
-              stroke-width="18"
-              stroke-linecap="butt"
-              fill="none"
-              opacity="0.94"
-            />
+            <g 
+              fill="none" 
+              stroke="url(#kq_metal_strong)" 
+              stroke-width="13.5" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+            >
+              <path d="M 28 15 L 28 85" stroke-width="15" />
 
-            <!-- K 右上斜杠：更短、更淡、更模糊 -->
-            <path
-              d="M 24 46 L 44 26"
-              stroke="url(#q-gradient)"
-              stroke-width="7"
-              stroke-linecap="round"
-              fill="none"
-              opacity="0.82"
-            />
+              <path d="M 28 48 L 58 18" />
 
-            <!-- K 右下斜杠：对称但同样弱化 -->
-            <path
-              d="M 24 54 L 44 74"
-              stroke="url(#q-gradient)"
-              stroke-width="7"
-              stroke-linecap="round"
-              fill="none"
-              opacity="0.82"
-            />
+              <path d="M 52 35 A 22 22 0 1 1 45 78" />
 
-            <!-- Q：极简暗示，只剩圆 + 短尾巴 -->
-            <path
-              d="M 68 34 
-                 A 15 15 0 1 1 68 66 
-                 M 74 58 L 82 70"
-              stroke="url(#q-gradient)"
-              stroke-width="5.5"
-              stroke-linecap="round"
-              fill="none"
-              opacity="0.75"
-            />
+              <path d="M 35 48 L 82 92" />
+            </g>
           </svg>
         </a>
       </h2>
@@ -115,14 +77,9 @@ import HeaderLink from './HeaderLink.astro';
     text-decoration: none;
   }
 
+  /* 移除不必要的透明度，确保 Logo 清晰 */
   h2 a svg {
     display: block;
-    opacity: 0.93;
-    transition: opacity 0.14s ease;
-  }
-
-  h2 a:hover svg {
-    opacity: 1;
   }
 
   .nav-divider {
@@ -140,15 +97,15 @@ import HeaderLink from './HeaderLink.astro';
     padding: 0.9em 0.7em;
     color: #222;
     font-size: 0.94rem;
-    font-weight: 480;
+    font-weight: 500;
     letter-spacing: 0.02em;
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.15s ease;
+    transition: all 0.2s ease;
   }
 
-  nav a.active,
-  nav a:hover {
-    border-bottom-color: #666;
+  nav a:hover, nav a.active {
+    color: #000;
+    border-bottom-color: #333;
   }
 </style>
