@@ -3,7 +3,7 @@
 title: "测试"
 description: "简单测试"
 pubDate: "Jun 19 2025"
-heroImage: "/blog-placeholder-1. jpg"
+heroImage: "/blog-placeholder-2. jpg"
 
 ---
 # 这是一个测试
