@@ -44,27 +44,18 @@ import Layout from '../layouts/BlogPost.astro';
 				</div>
 			</div>
 		</section>
-
-		<hr class="divider" />
-
-		<section class="philosophy">
-			<p class="en-footer">We spend our lives searching for an order that carries warmth.</p>
-			<p class="zh-footer">我们终其一生，不过是在寻找一种有温度的秩序。</p>
-			<p class="en-footer">To find softness within the sharp, and wholeness within the incomplete.</p>
-			<p class="zh-footer">在锐利中寻圆润，在缺失中见完整。</p>
-		</section>
-	</div>
+        </div>
 </Layout>
 
 <style>
 	.about-content {
 		max-width: 68ch;
 		margin: 0 auto;
-		padding: 4rem 1.5rem;
+		/* 底部 padding 增加到 12rem，给 Footer 留出足够的视觉空间，避免重复感 */
+		padding: 4rem 1.5rem 12rem 1.5rem; 
 		line-height: 2;
 	}
 
-	/* 全局图片处理：呼应黑白航拍图的质感 */
 	:global(.hero-image) {
 		border-radius: 12px;
 		filter: grayscale(100%);
@@ -124,39 +115,10 @@ import Layout from '../layouts/BlogPost.astro';
 		margin-top: 0.4rem;
 	}
 
-	.divider {
-		margin: 8rem auto;
-		border: 0;
-		border-top: 1px solid #eee;
-		width: 40px;
-	}
-
-	.philosophy {
-		text-align: center;
-		padding-bottom: 10rem;
-	}
-
-	.en-footer {
-		font-family: Georgia, serif;
-		font-style: italic;
-		font-size: 1.1rem;
-		color: #aaa;
-		margin: 0.5rem 0;
-	}
-
-	.zh-footer {
-		font-size: 1.2rem;
-		letter-spacing: 0.25em;
-		color: #222;
-		margin: 1rem 0 2rem;
-		font-weight: 400;
-	}
-
 	@media (max-width: 600px) {
-		.about-content { padding: 2rem 1.2rem; }
+		.about-content { padding: 2rem 1.2rem 8rem 1.2rem; }
 		.en { font-size: 0.95rem; }
 		.zh { font-size: 0.95rem; letter-spacing: 0.1em; }
 		.en-h { font-size: 1.3rem; }
-		.zh-footer { font-size: 1.1rem; }
 	}
 </style>
