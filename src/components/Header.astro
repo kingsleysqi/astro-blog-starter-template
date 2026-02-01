@@ -14,60 +14,66 @@ import HeaderLink from './HeaderLink.astro';
 						height="54"
 					>
 						<defs>
-							<!-- 统一日式哑光灰 -->
-							<linearGradient id="k_main" x1="0%" y1="0%" x2="100%" y2="100%">
-								<stop offset="0%" stop-color="#eeeeee"/>
+							<!-- K 竖杠：强对比（网页安全） -->
+							<linearGradient id="k_bar_strong" x1="0%" y1="0%" x2="0%" y2="100%">
+								<stop offset="0%" stop-color="#444444"/>
+								<stop offset="100%" stop-color="#111111"/>
+							</linearGradient>
+
+							<!-- 其余结构：弱化冷灰 -->
+							<linearGradient id="k_body_soft" x1="0%" y1="0%" x2="100%" y2="100%">
+								<stop offset="0%" stop-color="#d0d0d0"/>
 								<stop offset="100%" stop-color="#9a9a9a"/>
 							</linearGradient>
 						</defs>
 
-						<!-- K：竖主干（第一视觉锚点） -->
+						<!-- K：竖主干（绝对主视觉） -->
 						<path
-							d="M 24 10 L 24 90"
+							d="M 20 8 L 20 92"
 							fill="none"
-							stroke="url(#k_main)"
-							stroke-width="16"
+							stroke="url(#k_bar_strong)"
+							stroke-width="20"
 							stroke-linecap="butt"
 						/>
 
 						<!-- K：上臂 -->
 						<path
-							d="M 24 50 L 56 24"
+							d="M 20 50 L 54 20"
 							fill="none"
-							stroke="url(#k_main)"
-							stroke-width="13"
+							stroke="url(#k_body_soft)"
+							stroke-width="12"
 							stroke-linecap="butt"
 						/>
 
 						<!-- K：下臂 -->
 						<path
-							d="M 24 50 L 56 78"
+							d="M 20 50 L 54 80"
 							fill="none"
-							stroke="url(#k_main)"
-							stroke-width="13"
+							stroke="url(#k_body_soft)"
+							stroke-width="12"
 							stroke-linecap="butt"
 						/>
 
-						<!-- Q：弱化为“结构圆”（彩蛋级） -->
+						<!-- Q：弱化结构圆（彩蛋级） -->
 						<path
-							d="M 78 32
-							   A 20 20 0 1 1 78 68
-							   A 20 20 0 1 1 78 32"
+							d="M 82 32
+							   A 20 20 0 1 1 82 68
+							   A 20 20 0 1 1 82 32"
 							fill="none"
-							stroke="url(#k_main)"
-							stroke-width="9"
+							stroke="url(#k_body_soft)"
+							stroke-width="8"
 							stroke-linecap="butt"
-							opacity="0.55"
+							opacity="0.45"
 						/>
 
 						<!-- Q：极克制尾巴 -->
 						<path
-							d="M 86 66 L 98 82"
+							d="M 90 66 L 104 84"
 							fill="none"
-							stroke="url(#k_main)"
-							stroke-width="8"
+							stroke="url(#k_body_soft)"
+							stroke-width="7"
 							stroke-linecap="butt"
-							opacity="0.55"
+							opacity="0.45"
 						/>
 					</svg>
 				</a>
@@ -88,7 +94,7 @@ import HeaderLink from './HeaderLink.astro';
 	header {
 		margin: 0;
 		padding: 0 1.2em;
-		background: #fff;
+		background: #ffffff;
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 	}
 
@@ -103,6 +109,10 @@ import HeaderLink from './HeaderLink.astro';
 		align-items: center;
 	}
 
+	h2 {
+		margin: 0;
+	}
+
 	h2 a {
 		display: flex;
 		align-items: center;
@@ -111,7 +121,7 @@ import HeaderLink from './HeaderLink.astro';
 
 	h2 a svg {
 		display: block;
-		opacity: 0.95;
+		opacity: 0.96;
 	}
 
 	h2 a:hover svg {
@@ -125,7 +135,7 @@ import HeaderLink from './HeaderLink.astro';
 		background: linear-gradient(
 			to bottom,
 			transparent,
-			#aaa,
+			#999,
 			#666,
 			transparent
 		);
