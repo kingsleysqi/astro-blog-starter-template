@@ -18,13 +18,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			}
 			.hero-image {
 				width: 100%;
+				/* --- 核心修改：确保图片在电脑端比例统一且不拉伸 --- */
+				aspect-ratio: 16 / 9;    /* 你也可以改成 3/2 让图片高一点 */
+				object-fit: cover;       /* 自动裁剪多余部分，保证不缩放变形 */
+				/* ------------------------------------------- */
 				border-radius: 12px;
 				margin-bottom: 3rem;
-				/* 减弱阴影，增加高级感 */
 				box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+				display: block;          /* 消除图片底部的微小间隙 */
 			}
 			
-			/* 标题：更有呼吸感，不那么沉重 */
 			h1 {
 				font-size: 2.2rem;
 				font-weight: 300;
@@ -33,12 +36,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				color: #222;
 			}
 
-			/* Slogan 容器 */
 			.tagline {
 				margin: 3rem 0;
 			}
 
-			/* 英文：斜体、优雅 */
 			.tagline-en {
 				font-family: Georgia, serif;
 				font-style: italic;
@@ -47,7 +48,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				margin-bottom: 0.4rem;
 			}
 
-			/* 中文：细体、拉开字间距 */
 			.tagline-zh {
 				font-size: 1rem;
 				color: #444;
@@ -85,6 +85,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			@media (max-width: 600px) {
 				h1 { font-size: 1.8rem; }
 				.tagline-zh { font-size: 0.9rem; letter-spacing: 0.1em; }
+				/* 移动端可选：如果不希望图片太扁，可以在手机端恢复原始比例或改为 4:3 */
+				.hero-image { aspect-ratio: 4 / 3; }
 			}
 		</style>
 	</head>
