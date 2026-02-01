@@ -2,7 +2,7 @@
 title: "Origins and Flux | 溯源与流变"
 description: "The inaugural echo of KingsleyQi.com"
 pubDate: "Feb 01 2026"
-heroImage: "/blog-placeholder-7.jpg"
+heroImage: "/IMG20260128171636.jpg"
 ---
 
 <div class="bilingual-blog">
@@ -32,3 +32,36 @@ heroImage: "/blog-placeholder-7.jpg"
 </section>
 
 </div>
+
+<style>
+  /* 强制应用全局一致的格调样式 */
+  .bilingual-blog section {
+    margin-bottom: 3.5rem;
+  }
+
+  /* 英文：衬线、斜体、浅灰色 */
+  .bilingual-blog .en {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: #888;
+    line-height: 1.8;
+    margin-bottom: 0.6rem;
+  }
+
+  /* 中文：细体、大间距、深灰色 */
+  .bilingual-blog .zh {
+    font-size: 1.05rem;
+    color: #333;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+    line-height: 2;
+  }
+
+  .dot-divider {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    width: 30px;
+    margin: 4rem auto;
+  }
+</style>
