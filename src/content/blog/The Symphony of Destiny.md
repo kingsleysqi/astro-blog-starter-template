@@ -2,7 +2,7 @@
 title: "The Symphony of Destiny | 宿命的交响：梦境、现实与平行时空"
 description: "探讨异国生活中的既视感，以及关于平行时空与命运轮回的哲学思辨。"
 pubDate: "Feb 02 2026"
-heroImage: "/destiny-parallel-2.jpg"
+heroImage: "/blog-placeholder-2.jpg"
 ---
 
 <div class="bilingual-blog">
