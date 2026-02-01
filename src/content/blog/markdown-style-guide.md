@@ -2,7 +2,7 @@
 title: "Origins and Flux | 溯源与流变"
 description: "The inaugural echo of KingsleyQi.com"
 pubDate: "Feb 01 2026"
-heroImage: "/IMG20260128171636.jpg"
+heroImage: "/blog-placeholder-7.jpg"
 ---
 
 <div class="bilingual-blog">
@@ -24,12 +24,6 @@ heroImage: "/IMG20260128171636.jpg"
 <p class="zh">你或许已经注意到了那个标识：一个隐去了脊梁的 K，一个拒绝闭合的 Q。这是对学习状态的一种隐喻。我们从未真正“圆满”。那缺失的一笔是光照进来的地方，而圆环的缺口，则是对话开始的地方。</p>
 </section>
 
-<hr class="dot-divider" />
-
-<section>
-<p class="en">We spend our lives searching for an order that carries warmth. In the sharp, we find softness; in the incomplete, we find ourselves.</p>
-<p class="zh">我们终其一生，不过是在寻找一种有温度的秩序。在锐利中寻圆润，在缺失中，找寻自我。</p>
-</section>
 
 </div>
 
