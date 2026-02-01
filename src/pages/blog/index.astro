@@ -31,13 +31,12 @@ const posts = (await getCollection('blog')).sort(
 				padding: 0;
 			}
 			ul li {
-				width: calc(50% - 1rem); /* 电脑端并排两列 */
+				width: calc(50% - 1rem);
 			}
 			
-			/* 统一所有列表项的图片容器 */
 			.image-container {
 				width: 100%;
-				aspect-ratio: 16 / 9; /* 强制统一比例 */
+				aspect-ratio: 16 / 9; 
 				overflow: hidden;
 				border-radius: 12px;
 				margin-bottom: 1rem;
@@ -48,51 +47,45 @@ const posts = (await getCollection('blog')).sort(
 				width: 100% !important;
 				height: 100% !important;
 				object-fit: cover !important;
-				transition: transform 0.3s ease;
 			}
 
-			/* 第一篇文章特殊处理：占满一行 */
 			ul li:first-child {
 				width: 100%;
 				margin-bottom: 2rem;
 			}
 			ul li:first-child .image-container {
-				aspect-ratio: 21 / 9; /* 第一张图更宽更有气势 */
+				aspect-ratio: 21 / 9; 
 			}
 
 			ul li a {
 				display: block;
 				text-decoration: none;
 			}
-			.title {
+
+			/* 重点修改：使用专用类名，不影响首页 */
+			.blog-post-title {
 				margin: 0.5rem 0 0.2rem 0;
 				color: #222;
 				line-height: 1.4;
-				font-size: 1.25rem;
+				font-size: 1.1rem; /* 调小字体，匹配你首页的精致感 */
 				font-weight: 400;
+				letter-spacing: 0.05em;
 			}
+
 			.date {
 				margin: 0;
 				color: #888;
-				font-size: 0.9rem;
-			}
-
-			ul li a:hover img {
-				transform: scale(1.03);
+				font-size: 0.85rem;
 			}
 
 			@media (max-width: 720px) {
-				ul {
-					gap: 2rem;
-				}
-				ul li {
-					width: 100% !important; /* 手机端全部单列 */
-				}
+				ul { gap: 2rem; }
+				ul li { width: 100% !important; }
 				.image-container, ul li:first-child .image-container {
-					aspect-ratio: 16 / 9; /* 手机端统一比例，防止太窄 */
+					aspect-ratio: 16 / 9;
 				}
-				.title {
-					font-size: 1.1rem;
+				.blog-post-title {
+					font-size: 1rem;
 				}
 			}
 		</style>
@@ -109,7 +102,7 @@ const posts = (await getCollection('blog')).sort(
 									<div class="image-container">
 										<img src={post.data.heroImage} alt={post.data.title} />
 									</div>
-									<h4 class="title">{post.data.title}</h4>
+									<h4 class="blog-post-title">{post.data.title}</h4>
 									<p class="date">
 										<FormattedDate date={post.data.pubDate} />
 									</p>
