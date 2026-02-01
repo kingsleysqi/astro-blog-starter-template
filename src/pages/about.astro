@@ -20,95 +20,143 @@ import Layout from '../layouts/BlogPost.astro';
 				<p class="zh">然而，真正动人的存在，往往始于一处<strong>克制的退让</strong>。</p>
 			</div>
 
-			<h3>The Vanishing Spine | 脊梁的隐没</h3>
-			<div class="para-group">
-				<p class="en">In a place where a pillar should stand, we chose to let it vanish. This is not weakness, but a conscious clarity of "non-contention." It tells us that what truly supports a world is never the visible spine, but the transitions and character maintained even in its absence.</p>
-				<p class="zh">在一个理应撑起支柱的位置，选择让它隐去。这并非软弱，而是一种“不争”的清醒。它告诉我们：真正能支撑起一个世界的，从来不是那根外显的脊梁，而是那份在缺失中依然能守住的转折与风骨。</p>
+			<div class="chapter">
+				<h3 class="chapter-title"><span class="en-h">The Vanishing Spine</span> <span class="zh-h">脊梁的隐没</span></h3>
+				<div class="para-group">
+					<p class="en">In a place where a pillar should stand, we chose to let it vanish. This is not weakness, but a conscious clarity of "non-contention." It tells us that what truly supports a world is never the visible spine, but the transitions and character maintained even in its absence.</p>
+					<p class="zh">在一个理应撑起支柱的位置，选择让它隐去。这并非软弱，而是一种“不争”的清醒。它告诉我们：真正能支撑起一个世界的，从来不是那根外显的脊梁，而是那份在缺失中依然能守住的转折与风骨。</p>
+				</div>
 			</div>
 
-			<h3>The Mercy of Moistness | 润物的慈悲</h3>
-			<div class="para-group">
-				<p class="en">There should always be something "moist" in life. It is not the sharpness of a blade, but the mellow wholeness left by water on stone. This texture signifies a deep reconciliation with the world: layer upon layer of warmth wrapped around the hardest parts of reason.</p>
-				<p class="zh">生命里总该有些东西是“润”的。它不是刀刃的锋利，而是水滴在岩石上留下的圆融。这种质感意味着一种与世界的深度和解：在理性最坚硬的地方，依然包裹着层层温润。</p>
+			<div class="chapter">
+				<h3 class="chapter-title"><span class="en-h">The Mercy of Moistness</span> <span class="zh-h">润物的慈悲</span></h3>
+				<div class="para-group">
+					<p class="en">There should always be something "moist" in life. It is not the sharpness of a blade, but the mellow wholeness left by water on stone. This texture signifies a deep reconciliation with the world: layer upon layer of warmth wrapped around the hardest parts of reason.</p>
+					<p class="zh">生命里总该有些东西是“润”的。它不是刀刃的锋利，而是水滴在岩石上留下的圆融。这种质感意味着一种与世界的深度和解：在理性最坚硬的地方，依然包裹着层层温润。</p>
+				</div>
 			</div>
 
-			<h3>The Invitation of the Unfinished | 未竟之邀</h3>
-			<div class="para-group">
-				<p class="en">Completeness is precious, but an unfinished circle possesses more vitality. It leaves an opening for the wind to pass and for the soul to enter. Two symbols gaze at each other in silence, never touching, yet reaching a balance within that invisible negative space.</p>
-				<p class="zh">圆满固然可贵，但未竟之圆却更具生命力。因为它留出了一个缺口，让清风可以穿行，让灵魂可以出入。两个符号在无声中遥遥相望，互不干涉，却在中间那抹看不见的负空间里，达成了一种平衡。</p>
+			<div class="chapter">
+				<h3 class="chapter-title"><span class="en-h">The Invitation of the Unfinished</span> <span class="zh-h">未竟之邀</span></h3>
+				<div class="para-group">
+					<p class="en">Completeness is precious, but an unfinished circle possesses more vitality. It leaves an opening for the wind to pass and for the soul to enter. Two symbols gaze at each other in silence, never touching, yet reaching a balance within that invisible negative space.</p>
+					<p class="zh">圆满固然可贵，但未竟之圆却更具生命力。因为它留出了一个缺口，让清风可以穿行，让灵魂可以出入。两个符号在无声中遥遥相望，互不干涉，却在中间那抹看不见的负空间里，达成了一种平衡。</p>
+				</div>
 			</div>
+		</section>
+
+		<hr class="divider" />
+
+		<section class="philosophy">
+			<p class="en-footer">We spend our lives searching for an order that carries warmth.</p>
+			<p class="zh-footer">我们终其一生，不过是在寻找一种有温度的秩序。</p>
+			<p class="en-footer">To find softness within the sharp, and wholeness within the incomplete.</p>
+			<p class="zh-footer">在锐利中寻圆润，在缺失中见完整。</p>
 		</section>
 	</div>
 </Layout>
 
 <style>
 	.about-content {
-		max-width: 65ch;
+		max-width: 68ch;
 		margin: 0 auto;
-		padding: 2rem 1rem;
-		line-height: 1.8;
+		padding: 4rem 1.5rem;
+		line-height: 2;
+	}
+
+	/* 全局图片处理：呼应黑白航拍图的质感 */
+	:global(.hero-image) {
+		border-radius: 12px;
+		filter: grayscale(100%);
+		opacity: 0.9;
+		box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+		transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	}
+
+	:global(.hero-image:hover) {
+		filter: grayscale(0%);
+		opacity: 1;
+		transform: translateY(-5px);
 	}
 
 	.para-group {
-		margin-bottom: 2.5rem;
+		margin-bottom: 3.5rem;
 	}
 
-	/* 英文排版：优先显示，略浅，带衬线 */
 	.en {
 		font-family: Georgia, serif;
 		font-style: italic;
 		font-size: 1.05rem;
-		color: #777;
-		margin-bottom: 0.3rem;
+		color: #888;
+		margin-bottom: 0.5rem;
 	}
 
-	/* 中文排版：稳重，黑体，稍强的呼吸感 */
 	.zh {
-		font-size: 1rem;
-		letter-spacing: 0.1em;
+		font-size: 1.05rem;
+		letter-spacing: 0.15em;
 		color: #333;
 		font-weight: 300;
 	}
 
-	h3 {
-		margin-top: 4rem;
-		font-size: 1.4rem;
+	.chapter {
+		margin-top: 6rem;
+	}
+
+	.chapter-title {
+		display: flex;
+		flex-direction: column;
+		border: none;
+		margin-bottom: 2rem;
+	}
+
+	.en-h {
+		font-family: Georgia, serif;
+		font-size: 1.6rem;
+		font-weight: 300;
 		color: #222;
-		border-bottom: 1px solid #f0f0f0;
-		padding-bottom: 0.5rem;
-		margin-bottom: 1.5rem;
+	}
+
+	.zh-h {
+		font-size: 0.85rem;
+		color: #bbb;
+		letter-spacing: 0.4em;
+		text-transform: uppercase;
+		margin-top: 0.4rem;
 	}
 
 	.divider {
-		margin: 5rem 0;
+		margin: 8rem auto;
 		border: 0;
 		border-top: 1px solid #eee;
+		width: 40px;
 	}
 
 	.philosophy {
 		text-align: center;
-		padding-bottom: 6rem;
+		padding-bottom: 10rem;
 	}
 
 	.en-footer {
 		font-family: Georgia, serif;
 		font-style: italic;
 		font-size: 1.1rem;
-		color: #999;
-		margin: 0.2rem 0;
+		color: #aaa;
+		margin: 0.5rem 0;
 	}
 
 	.zh-footer {
 		font-size: 1.2rem;
-		letter-spacing: 0.2em;
-		color: #333;
-		margin: 0.6rem 0;
+		letter-spacing: 0.25em;
+		color: #222;
+		margin: 1rem 0 2rem;
 		font-weight: 400;
 	}
 
 	@media (max-width: 600px) {
+		.about-content { padding: 2rem 1.2rem; }
 		.en { font-size: 0.95rem; }
-		.zh { font-size: 0.9rem; }
-		.zh-footer { font-size: 1rem; }
+		.zh { font-size: 0.95rem; letter-spacing: 0.1em; }
+		.en-h { font-size: 1.3rem; }
+		.zh-footer { font-size: 1.1rem; }
 	}
 </style>
