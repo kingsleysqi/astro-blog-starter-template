@@ -3,42 +3,28 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
-  <nav>
-    <div class="left">
-      <h2>
+  <nav class="header-nav">
+    <div class="nav-left">
+      <div class="logo-wrapper">
         <a href="/" aria-label="Home">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="54" height="54">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="56" height="56">
             <defs>
-              <linearGradient id="k-bar-grad" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#fff" stop-opacity="0.1" />
-                <stop offset="20%" stop-color="#fff" />
-                <stop offset="80%" stop-color="#fff" />
-                <stop offset="100%" stop-color="#fff" stop-opacity="0.1" />
+              <linearGradient id="k-stem-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+                <stop offset="20%" stop-color="#fff" stop-opacity="0.9" />
+                <stop offset="80%" stop-color="#fff" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="#fff" stop-opacity="0" />
               </linearGradient>
             </defs>
-
             <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path 
-                d="M 66 38 A 20 20 0 1 1 48 78" 
-                stroke="#B0B0B0" 
-                stroke-width="10" 
-              />
-
-              <path 
-                d="M 38 48 L 62 22 M 38 52 L 78 90" 
-                stroke="#D0D0D0" 
-                stroke-width="13" 
-              />
-
-              <path 
-                d="M 28 12 L 28 88" 
-                stroke="url(#k-bar-grad)" 
-                stroke-width="19" 
-              />
+              <path d="M 65 35 A 21 21 0 1 1 48 78" stroke="#ccc" stroke-width="10" />
+              <path d="M 38 48 L 62 20" stroke="#eee" stroke-width="12" />
+              <path d="M 38 52 L 80 92" stroke="#eee" stroke-width="14" />
+              <path d="M 28 12 L 28 88" stroke="url(#k-stem-gradient)" stroke-width="19" />
             </g>
           </svg>
         </a>
-      </h2>
+      </div>
 
       <span class="nav-divider"></span>
 
@@ -52,74 +38,90 @@ import HeaderLink from './HeaderLink.astro';
 </header>
 
 <style>
+  /* 基础布局：强制页头高度和白色背景 */
   header {
-    padding: 0 1.5rem;
+    margin: 0;
+    padding: 0;
     background: #ffffff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    height: 70px; /* 固定高度 */
+    display: flex;
+    align-items: center;
   }
 
-  nav {
+  .header-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 64px;
   }
 
-  .left {
+  .nav-left {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    height: 100%;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* 锁定 Logo 容器宽度 */
+  }
+
+  .logo-wrapper a {
+    display: flex;
+    align-items: center;
   }
 
   .nav-divider {
     width: 1px;
-    height: 20px;
-    background: #f0f0f0;
+    height: 24px;
+    background: #eee;
   }
 
   .internal-links {
     display: flex;
-    gap: 0.5rem;
+    align-items: center;
+    height: 100%;
   }
 
-  /* 导航链接：找回明显的底部横杠提示 */
-  nav a {
-    padding: 1.2rem 1rem;
-    color: #555;
+  /* 导航项样式 + 底部横杠提示 */
+  .internal-links :global(a) {
+    padding: 0 1rem;
+    height: 70px; /* 与页头同高，确保横杠在最底部 */
+    display: flex;
+    align-items: center;
+    color: #444;
+    text-decoration: none;
     font-size: 0.95rem;
     font-weight: 500;
-    text-decoration: none;
     position: relative;
     transition: color 0.2s ease;
   }
 
-  nav a:hover {
+  .internal-links :global(a:hover) {
     color: #000;
   }
 
-  /* 底部横杠动画 */
-  nav a::after {
+  /* 底部横杠：找回之前的样式 */
+  .internal-links :global(a.active::after),
+  .internal-links :global(a:hover::after) {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 20%;
-    width: 60%;
+    left: 15%;
+    width: 70%;
     height: 3px;
     background: #333;
-    border-radius: 2px;
-    transform: scaleX(0);
-    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 2px 2px 0 0;
   }
 
-  /* 激活或悬停时显示横杠 */
-  nav a:hover::after,
-  nav a.active::after {
-    transform: scaleX(1);
-  }
-
-  nav a.active {
+  .internal-links :global(a.active) {
     color: #000;
     font-weight: 600;
   }
