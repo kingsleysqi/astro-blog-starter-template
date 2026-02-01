@@ -4,35 +4,49 @@ import Layout from '../layouts/BlogPost.astro';
 
 <Layout
 	title="About Me"
-	description="关于我 - KingsleyQi"
+	description="About KingsleyQi - The Philosophy of Design"
 	pubDate={new Date('February 01 2026')}
 	heroImage="/blog-placeholder-about.jpg"
 >
 	<div class="about-content">
 		<section class="prose">
-			<p>世人皆在追逐“满”。满溢的话语，无孔不入的喧嚣，以及那些试图填补每一寸虚空的欲望。</p>
-			<p>然而，真正动人的存在，往往始于一处<strong>克制的退让</strong>。</p>
+			<div class="para-group">
+				<p class="en">The world is constantly chasing "fullness"—the overflow of words, the pervasive noise, and the desire to fill every inch of void.</p>
+				<p class="zh">世人皆在追逐“满”。满溢的话语，无孔不入的喧嚣，以及那些试图填补每一寸虚空的欲望。</p>
+			</div>
 
-			<h3>脊梁的隐没</h3>
-			<p>在一个理应撑起支柱的位置，选择让它隐去。这并非软弱，而是一种“不争”的清醒。它告诉我们：真正能支撑起一个世界的，从来不是那根外显的脊梁，而是那份在缺失中依然能守住的转折与风骨。</p>
+			<div class="para-group">
+				<p class="en">Yet, the most moving presence often begins with a <strong>restrained retreat</strong>.</p>
+				<p class="zh">然而，真正动人的存在，往往始于一处<strong>克制的退让</strong>。</p>
+			</div>
 
-			<h3>润物的慈悲</h3>
-			<p>生命里总该有些东西是“润”的。它不是刀刃的锋利，而是水滴在岩石上留下的圆融。这种质感意味着一种与世界的深度和解：在理性最坚硬的地方，依然包裹着层层温润。</p>
+			<h3>The Vanishing Spine | 脊梁的隐没</h3>
+			<div class="para-group">
+				<p class="en">In a place where a pillar should stand, we chose to let it vanish. This is not weakness, but a conscious clarity of "non-contention." It tells us that what truly supports a world is never the visible spine, but the transitions and character maintained even in its absence.</p>
+				<p class="zh">在一个理应撑起支柱的位置，选择让它隐去。这并非软弱，而是一种“不争”的清醒。它告诉我们：真正能支撑起一个世界的，从来不是那根外显的脊梁，而是那份在缺失中依然能守住的转折与风骨。</p>
+			</div>
 
-			<h3>未竟的邀约</h3>
-			<p>圆满固然可贵，但未竟之圆却更具生命力。因为它留出了一个缺口，让清风可以穿行，让灵魂可以出入。两个符号在无声中遥遥相望，互不干涉，却在中间那抹看不见的负空间里，达成了一种平衡。</p>
+			<h3>The Mercy of Moistness | 润物的慈悲</h3>
+			<div class="para-group">
+				<p class="en">There should always be something "moist" in life. It is not the sharpness of a blade, but the mellow wholeness left by water on stone. This texture signifies a deep reconciliation with the world: layer upon layer of warmth wrapped around the hardest parts of reason.</p>
+				<p class="zh">生命里总该有些东西是“润”的。它不是刀刃的锋利，而是水滴在岩石上留下的圆融。这种质感意味着一种与世界的深度和解：在理性最坚硬的地方，依然包裹着层层温润。</p>
+			</div>
+
+			<h3>The Invitation of the Unfinished | 未竟之邀</h3>
+			<div class="para-group">
+				<p class="en">Completeness is precious, but an unfinished circle possesses more vitality. It leaves an opening for the wind to pass and for the soul to enter. Two symbols gaze at each other in silence, never touching, yet reaching a balance within that invisible negative space.</p>
+				<p class="zh">圆满固然可贵，但未竟之圆却更具生命力。因为它留出了一个缺口，让清风可以穿行，让灵魂可以出入。两个符号在无声中遥遥相望，互不干涉，却在中间那抹看不见的负空间里，达成了一种平衡。</p>
+			</div>
 		</section>
 
 		<hr class="divider" />
 
 		<section class="philosophy">
-			<p class="zh">我们终其一生，不过是在寻找一种有温度的秩序。</p>
-			<p class="zh">在锐利中寻圆润，在缺失中见完整。</p>
+			<p class="en-footer">We spend our lives searching for an order that carries warmth.</p>
+			<p class="zh-footer">我们终其一生，不过是在寻找一种有温度的秩序。</p>
 			
-			<div class="en-box">
-				<p class="en">We spend our lives searching for an order that carries warmth.</p>
-				<p class="en">To find softness within the sharp, and wholeness within the incomplete.</p>
-			</div>
+			<p class="en-footer">To find softness within the sharp, and wholeness within the incomplete.</p>
+			<p class="zh-footer">在锐利中寻圆润，在缺失中见完整。</p>
 		</section>
 	</div>
 </Layout>
@@ -41,47 +55,70 @@ import Layout from '../layouts/BlogPost.astro';
 	.about-content {
 		max-width: 65ch;
 		margin: 0 auto;
+		padding: 2rem 1rem;
 		line-height: 1.8;
 	}
 
-	.prose p {
-		margin-bottom: 1.5rem;
-		color: #444;
+	.para-group {
+		margin-bottom: 2.5rem;
 	}
 
-	.prose h3 {
-		margin-top: 2.5rem;
+	/* 英文排版：优先显示，略浅，带衬线 */
+	.en {
+		font-family: Georgia, serif;
+		font-style: italic;
+		font-size: 1.05rem;
+		color: #777;
+		margin-bottom: 0.3rem;
+	}
+
+	/* 中文排版：稳重，黑体，稍强的呼吸感 */
+	.zh {
+		font-size: 1rem;
+		letter-spacing: 0.1em;
+		color: #333;
+		font-weight: 300;
+	}
+
+	h3 {
+		margin-top: 4rem;
+		font-size: 1.4rem;
 		color: #222;
-		font-weight: 600;
+		border-bottom: 1px solid #f0f0f0;
+		padding-bottom: 0.5rem;
+		margin-bottom: 1.5rem;
 	}
 
 	.divider {
-		margin: 4rem 0;
+		margin: 5rem 0;
 		border: 0;
 		border-top: 1px solid #eee;
 	}
 
 	.philosophy {
 		text-align: center;
-		padding-bottom: 4rem;
+		padding-bottom: 6rem;
 	}
 
-	.zh {
-		font-size: 1.1rem;
-		letter-spacing: 0.15em;
-		color: #333;
-		margin: 0.5rem 0;
-	}
-
-	.en-box {
-		margin-top: 1.2rem;
-	}
-
-	.en {
-		font-family: serif;
+	.en-footer {
+		font-family: Georgia, serif;
 		font-style: italic;
-		font-size: 0.95rem;
+		font-size: 1.1rem;
 		color: #999;
 		margin: 0.2rem 0;
+	}
+
+	.zh-footer {
+		font-size: 1.2rem;
+		letter-spacing: 0.2em;
+		color: #333;
+		margin: 0.6rem 0;
+		font-weight: 400;
+	}
+
+	@media (max-width: 600px) {
+		.en { font-size: 0.95rem; }
+		.zh { font-size: 0.9rem; }
+		.zh-footer { font-size: 1rem; }
 	}
 </style>
