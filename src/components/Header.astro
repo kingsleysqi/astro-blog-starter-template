@@ -9,72 +9,61 @@ import HeaderLink from './HeaderLink.astro';
 				<a href="/" aria-label="Home">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 120 100"
-						width="54"
-						height="54"
+						viewBox="0 0 100 100"
+						width="52"
+						height="52"
 					>
 						<defs>
-							<!-- K 竖杠：强对比（网页安全） -->
-							<linearGradient id="k_bar_strong" x1="0%" y1="0%" x2="0%" y2="100%">
-								<stop offset="0%" stop-color="#444444"/>
-								<stop offset="100%" stop-color="#111111"/>
+							<linearGradient id="k-strong" x1="0%" y1="0%" x2="0%" y2="100%">
+								<stop offset="0%"   stop-color="#2c2c2c"/>
+								<stop offset="100%" stop-color="#0f0f0f"/>
 							</linearGradient>
 
-							<!-- 其余结构：弱化冷灰 -->
-							<linearGradient id="k_body_soft" x1="0%" y1="0%" x2="100%" y2="100%">
-								<stop offset="0%" stop-color="#d0d0d0"/>
-								<stop offset="100%" stop-color="#9a9a9a"/>
+							<linearGradient id="q-soft" x1="0%" y1="0%" x2="100%" y2="100%">
+								<stop offset="0%"   stop-color="#aaaaaa"/>
+								<stop offset="100%" stop-color="#777777"/>
 							</linearGradient>
 						</defs>
 
-						<!-- K：竖主干（绝对主视觉） -->
+						<!-- K 主竖杠（核心・不可妥协） -->
 						<path
-							d="M 20 8 L 20 92"
-							fill="none"
-							stroke="url(#k_bar_strong)"
-							stroke-width="20"
+							d="M 22 12 L 22 88"
+							stroke="url(#k-strong)"
+							stroke-width="24"
 							stroke-linecap="butt"
+							fill="none"
 						/>
 
-						<!-- K：上臂 -->
+						<!-- K 右上斜杠 - 更短、更锐、更日式留白 -->
 						<path
-							d="M 20 50 L 54 20"
+							d="M 22 45 L 48 22"
+							stroke="url(#q-soft)"
+							stroke-width="10"
+							stroke-linecap="round"
 							fill="none"
-							stroke="url(#k_body_soft)"
-							stroke-width="12"
-							stroke-linecap="butt"
 						/>
 
-						<!-- K：下臂 -->
+						<!-- K 右下斜杠 - 对称但更克制 -->
 						<path
-							d="M 20 50 L 54 80"
+							d="M 22 55 L 48 78"
+							stroke="url(#q-soft)"
+							stroke-width="10"
+							stroke-linecap="round"
 							fill="none"
-							stroke="url(#k_body_soft)"
-							stroke-width="12"
-							stroke-linecap="butt"
 						/>
 
-						<!-- Q：弱化结构圆（彩蛋级） -->
+						<!-- Q - 极简单笔触（几乎只剩暗示） -->
 						<path
-							d="M 82 32
-							   A 20 20 0 1 1 82 68
-							   A 20 20 0 1 1 82 32"
-							fill="none"
-							stroke="url(#k_body_soft)"
-							stroke-width="8"
-							stroke-linecap="butt"
-							opacity="0.45"
-						/>
-
-						<!-- Q：极克制尾巴 -->
-						<path
-							d="M 90 66 L 104 84"
-							fill="none"
-							stroke="url(#k_body_soft)"
+							d="M 68 30 
+							   A 18 18 0 1 1 68 70 
+							   M 78 62 L 88 78"
+							stroke="url(#q-soft)"
 							stroke-width="7"
-							stroke-linecap="butt"
-							opacity="0.45"
+							stroke-linecap="round"
+							fill="none"
+							opacity="0.80"
 						/>
+
 					</svg>
 				</a>
 			</h2>
@@ -92,36 +81,39 @@ import HeaderLink from './HeaderLink.astro';
 
 <style>
 	header {
-		margin: 0;
-		padding: 0 1.2em;
+		padding: 0 1.5rem;
 		background: #ffffff;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 1px 6px rgba(0,0,0,0.04);
 	}
 
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
 	}
 
 	.left {
 		display: flex;
 		align-items: center;
+		gap: 1.1rem;
 	}
 
 	h2 {
 		margin: 0;
+		line-height: 1;
 	}
 
 	h2 a {
-		display: flex;
-		align-items: center;
+		display: block;
 		text-decoration: none;
 	}
 
 	h2 a svg {
 		display: block;
-		opacity: 0.96;
+		opacity: 0.92;
+		transition: opacity 0.12s ease;
 	}
 
 	h2 a:hover svg {
@@ -130,31 +122,28 @@ import HeaderLink from './HeaderLink.astro';
 
 	.nav-divider {
 		width: 1px;
-		height: 28px;
-		margin: 0 1.2em;
-		background: linear-gradient(
-			to bottom,
-			transparent,
-			#999,
-			#666,
-			transparent
-		);
+		height: 24px;
+		background: #e0e0e0;
 	}
 
 	.internal-links {
 		display: flex;
+		gap: 0.4rem;
 	}
 
 	nav a {
-		padding: 1em 0.6em;
-		color: #111;
+		padding: 0.9em 0.7em;
+		color: #222;
+		font-size: 0.94rem;
+		font-weight: 480;
+		letter-spacing: 0.02em;
 		text-decoration: none;
 		border-bottom: 2px solid transparent;
-		font-size: 0.95rem;
-		letter-spacing: 0.02em;
+		transition: border-color 0.15s ease;
 	}
 
-	nav a.active {
-		border-bottom-color: var(--accent);
+	nav a.active,
+	nav a:hover {
+		border-bottom-color: #666;
 	}
 </style>
