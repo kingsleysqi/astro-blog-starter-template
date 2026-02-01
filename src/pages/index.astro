@@ -10,57 +10,64 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style is:global>
-			main {
-				width: calc(100% - 2em);
-				max-width: 800px;
-				margin: 0 auto;
-				padding: 4em 1em;
+			/* 1. 强制缩小首页标题字号 */
+			h1 {
+				font-size: 1.6rem !important; /* 显著缩小，原来是 2.2rem */
+				font-weight: 300 !important;
+				margin-bottom: 1.5rem !important;
+				letter-spacing: 0.1em !important;
+				color: #222 !important;
+				text-transform: none;
 			}
 
-			/* 1. 定义一个强制比例的容器 */
+			/* 2. 强制首页 Hero 图片比例 */
 			.image-wrapper {
 				width: 100%;
-				aspect-ratio: 16 / 9; /* 这里控制比例 */
-				overflow: hidden;     /* 溢出裁剪 */
+				aspect-ratio: 16 / 9;
+				overflow: hidden;
 				border-radius: 12px;
-				margin-bottom: 3rem;
+				margin-bottom: 2.5rem;
 				box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-				background-color: #f5f5f5; /* 加个底色，防止图没出来时是白的 */
 			}
-
-			/* 2. 强制内部图片填满容器 */
 			.image-wrapper img {
 				width: 100% !important;
 				height: 100% !important;
-				object-fit: cover !important; /* 核心：不拉伸，填满 */
-				display: block;
+				object-fit: cover !important;
 			}
 
-			h1 {
-				font-size: 2.2rem;
-				font-weight: 300;
-				margin-bottom: 2rem;
-				letter-spacing: 0.1em;
-				color: #222;
+			main {
+				width: calc(100% - 2em);
+				max-width: 700px; /* 进一步缩小内容宽度，让排版更精致 */
+				margin: 0 auto;
+				padding: 3em 1em;
 			}
 
-			.tagline { margin: 3rem 0; }
+			/* 3. Slogan 部分微调 */
 			.tagline-en {
 				font-family: Georgia, serif;
 				font-style: italic;
-				font-size: 1.1rem;
+				font-size: 1rem !important; /* 稍微调小 */
 				color: #888;
 				margin-bottom: 0.4rem;
 			}
 			.tagline-zh {
-				font-size: 1rem;
+				font-size: 0.9rem !important; /* 稍微调小 */
 				color: #444;
 				letter-spacing: 0.2em;
 				font-weight: 300;
 			}
 
+			section h2 {
+				font-family: Georgia, serif;
+				font-size: 1.2rem !important; /* 缩小二级标题 */
+				font-weight: 300;
+				color: #222;
+				margin-top: 2rem;
+			}
+
 			@media (max-width: 600px) {
-				.image-wrapper { aspect-ratio: 4 / 3; } /* 手机端比例稍微方一点 */
+				h1 { font-size: 1.4rem !important; }
+				.image-wrapper { aspect-ratio: 4 / 3; }
 			}
 		</style>
 	</head>
@@ -78,11 +85,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<p class="tagline-zh">在边界处，探索设计与技术的交汇。</p>
 			</div>
 			
-			<hr />
+			<hr style="border: 0; border-top: 1px solid #f0f0f0; margin: 3rem 0;" />
 			
 			<section>
 				<h2>Recent Echoes | 近期的回响</h2>
-				<p>Explore more in the <a class="blog-link" href="/blog">Library</a>.</p>
+				<p style="font-size: 0.9rem; color: #999;">Explore more in the <a href="/blog" style="color: #666; text-decoration: underline;">Library</a>.</p>
 			</section>
 		</main>
 		<Footer />
