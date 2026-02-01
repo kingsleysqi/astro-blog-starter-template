@@ -3,28 +3,114 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()}  Philippines.
-<a href="mailto:i@kingsleyqi.com?subject=Hello%20Kingsley">i@kingsleyqi.com</a>
+    <div class="footer-container">
+        <div class="philosophy">
+            <div class="footer-group">
+                <p class="en-f">We spend our lives searching for an order that carries warmth.</p>
+                <p class="zh-f">我们终其一生，不过是在寻找一种有温度的秩序。</p>
+            </div>
+            <div class="footer-group">
+                <p class="en-f">To find softness within the sharp, and wholeness within the incomplete.</p>
+                <p class="zh-f">在锐利中寻圆润，在缺失中见完整。</p>
+            </div>
+        </div>
 
+        <hr class="footer-divider" />
+
+        <div class="contact-zone">
+            <a href="mailto:i@kingsleyqi.com?subject=Hello%20Kingsley" class="mail-link">
+                <span class="mail-label">Connect /</span> i@kingsleyqi.com
+            </a>
+            
+            <p class="copyright">
+                &copy; {today.getFullYear()} Kingsley Qi. 
+                <span class="location">Santo Tomas, Batangas</span>
+            </p>
+        </div>
+    </div>
 </footer>
+
 <style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
-	.social-links {
-		display: flex;
-		justify-content: center;
-		gap: 1em;
-		margin-top: 1em;
-	}
-	.social-links a {
-		text-decoration: none;
-		color: rgb(var(--gray));
-	}
-	.social-links a:hover {
-		color: rgb(var(--gray-dark));
-	}
+    footer {
+        padding: 6rem 1.5rem 4rem 1.5rem;
+        background: #ffffff; /* 放弃渐变，回归纯净的白 */
+        border-top: 1px solid #f9f9f9;
+    }
+
+    .footer-container {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .philosophy {
+        margin-bottom: 5rem;
+    }
+
+    .footer-group {
+        margin-bottom: 2rem;
+    }
+
+    /* 英文：柔和的灰，衬线斜体 */
+    .en-f {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 1rem;
+        color: #aaa;
+        margin-bottom: 0.4rem;
+        letter-spacing: 0.02em;
+    }
+
+    /* 中文：深色，高间距，呼吸感 */
+    .zh-f {
+        font-size: 1.1rem;
+        letter-spacing: 0.2em;
+        color: #333;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    .footer-divider {
+        width: 30px;
+        margin: 0 auto 3rem;
+        border: 0;
+        border-top: 1px solid #ddd;
+    }
+
+    /* 邮箱设计：去掉了刺眼的蓝色 */
+    .mail-link {
+        font-family: "JetBrains Mono", monospace; /* 增加一点技术感 */
+        font-size: 0.95rem;
+        color: #222;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        transition: opacity 0.3s ease;
+    }
+
+    .mail-label {
+        color: #bbb;
+        margin-right: 0.5rem;
+    }
+
+    .mail-link:hover {
+        opacity: 0.6;
+    }
+
+    .copyright {
+        margin-top: 2rem;
+        font-size: 0.75rem;
+        color: #ccc;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    .location {
+        margin-left: 1rem;
+        font-style: italic;
+    }
+
+    @media (max-width: 600px) {
+        .zh-f { font-size: 0.95rem; letter-spacing: 0.1em; }
+        .en-f { font-size: 0.85rem; }
+    }
 </style>
