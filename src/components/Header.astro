@@ -1,60 +1,157 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
 ---
 
 <header>
 	<nav>
-		<h2>
-			<a href="/">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="54" height="54">
-					<defs>
-						<linearGradient id="kq_v4_metal" x1="0%" y1="0%" x2="100%" y2="100%">
-							<stop offset="0%" style="stop-color:#FFFFFF" />
-							<stop offset="35%" style="stop-color:#C0C0C0" />
-							<stop offset="65%" style="stop-color:#888888" />
-							<stop offset="100%" style="stop-color:#444444" />
-						</linearGradient>
-					</defs>
-					<g 
-						fill="none" 
-						stroke="url(#kq_v4_metal)" 
-						stroke-width="13" 
-						stroke-linecap="round" 
-						stroke-linejoin="round"
+		<div class="left">
+			<h2>
+				<a href="/" aria-label="Home">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 100 100"
+						width="54"
+						height="54"
 					>
-						<path d="M 28 15 L 28 85" stroke-width="14" /> 
-						
-						<path d="M 28 50 L 58 20" />
-						
-						<path d="M 52 38 A 22 22 0 1 1 45 78" />
-						
-						<path d="M 40 48 L 82 90" />
-					</g>
-				</svg>
-			</a>
-		</h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+						<defs>
+							<!-- 主轴：日式哑光 -->
+							<linearGradient id="kq_bar" x1="0%" y1="0%" x2="100%" y2="0%">
+								<stop offset="0%" stop-color="#f0f0f0"/>
+								<stop offset="50%" stop-color="#bcbcbc"/>
+								<stop offset="100%" stop-color="#8f8f8f"/>
+							</linearGradient>
+
+							<!-- 结构线统一冷灰 -->
+							<linearGradient id="kq_body" x1="0%" y1="0%" x2="100%" y2="100%">
+								<stop offset="0%" stop-color="#e6e6e6"/>
+								<stop offset="100%" stop-color="#9a9a9a"/>
+							</linearGradient>
+						</defs>
+
+						<!-- 主轴 -->
+						<path
+							d="M 28 14 L 28 86"
+							fill="none"
+							stroke="url(#kq_bar)"
+							stroke-width="16"
+							stroke-linecap="butt"
+						/>
+
+						<!-- 被切开的圆 -->
+						<path
+							d="M 54 38 A 22 22 0 1 1 54 82"
+							fill="none"
+							stroke="url(#kq_body)"
+							stroke-width="13"
+							stroke-linecap="butt"
+						/>
+
+						<!-- 斜切 -->
+						<path
+							d="M 30 52 L 80 90"
+							fill="none"
+							stroke="url(#kq_body)"
+							stroke-width="13"
+							stroke-linecap="butt"
+						/>
+					</svg>
+				</a>
+			</h2>
+
+			<span class="nav-divider"></span>
+
+			<div class="internal-links">
+				<HeaderLink href="/">Home</HeaderLink>
+				<HeaderLink href="/blog">Blog</HeaderLink>
+				<HeaderLink href="/about">About</HeaderLink>
+			</div>
 		</div>
+
 		<div class="social-links">
-			<a href="https://github.com/KingsleyQi" target="_blank">
-				<span class="sr-only">GitHub</span>
-				<svg viewBox="0 0 16 16" width="32" height="32"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg>
+			<a href="https://github.com/KingsleyQi" target="_blank" aria-label="GitHub">
+				<svg viewBox="0 0 16 16" width="28" height="28">
+					<path
+						fill="currentColor"
+						d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+					/>
+				</svg>
 			</a>
 		</div>
 	</nav>
 </header>
 
 <style>
-	header { margin: 0; padding: 0 1em; background: white; box-shadow: 0 2px 8px rgba(0, 0, 0, 5%); }
-	nav { display: flex; align-items: center; justify-content: space-between; }
-	h2 a { display: flex; align-items: center; text-decoration: none; }
-	.internal-links { display: flex; }
-	nav a { padding: 1em 0.5em; color: #111; text-decoration: none; border-bottom: 4px solid transparent; }
-	nav a.active { border-bottom-color: var(--accent); }
-	.social-links { display: flex; align-items: center; }
-	@media (max-width: 720px) { .social-links { display: none; } }
+	header {
+		margin: 0;
+		padding: 0 1.2em;
+		background: #fff;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.left {
+		display: flex;
+		align-items: center;
+	}
+
+	h2 a {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+
+	h2 a svg {
+		display: block;
+		opacity: 0.92;
+	}
+
+	h2 a:hover svg {
+		opacity: 1;
+	}
+
+	.nav-divider {
+		width: 1px;
+		height: 28px;
+		margin: 0 1.2em;
+		background: linear-gradient(
+			to bottom,
+			transparent,
+			#aaa,
+			#666,
+			transparent
+		);
+	}
+
+	.internal-links {
+		display: flex;
+	}
+
+	nav a {
+		padding: 1em 0.6em;
+		color: #111;
+		text-decoration: none;
+		border-bottom: 2px solid transparent;
+		font-size: 0.95rem;
+		letter-spacing: 0.02em;
+	}
+
+	nav a.active {
+		border-bottom-color: var(--accent);
+	}
+
+	.social-links {
+		display: flex;
+		align-items: center;
+	}
+
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+	}
 </style>
