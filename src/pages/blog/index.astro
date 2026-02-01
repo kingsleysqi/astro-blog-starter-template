@@ -16,7 +16,6 @@ const posts = (await getCollection('blog')).sort(
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style is:global>
-			/* 强力全局样式：锁定所有博客列表图 */
 			main {
 				width: 960px;
 				max-width: calc(100% - 2em);
@@ -31,64 +30,76 @@ const posts = (await getCollection('blog')).sort(
 				margin: 0;
 				padding: 0;
 			}
-			/* 强制列表项在电脑端并排两列 */
+			/* 电脑端核心布局：两列并排 */
 			ul li {
-				width: calc(50% - 1rem) !important;
+				width: calc(50% - 1rem) !important; /* 强制两列 */
+				margin-bottom: 2rem;
 			}
-			/* 第一篇强制占满一行 */
+			/* 第一篇文章强制占满一行，且左右布局对齐 */
 			ul li:first-child {
 				width: 100% !important;
-				margin-bottom: 1rem;
+				margin-bottom: 3rem;
+				text-align: left;
 			}
 
-			/* 【核心】比例盒子：彻底解决图片大小不一 */
-			.list-img-wrapper {
-				width: 100% !important;
-				aspect-ratio: 16 / 9 !important; /* 你可以根据喜好改成 3/2 */
-				overflow: hidden !important;
+			/* 比例容器：这是电脑端整齐的关键 */
+			.pc-image-wrapper {
+				width: 100%;
+				aspect-ratio: 16 / 9; /* 锁定 16:9，你可以根据喜好改为 3/2 */
+				overflow: hidden;
 				border-radius: 12px;
-				margin-bottom: 0.8rem;
-				background: #f5f5f5;
-			}
-			/* 针对第一篇可以更宽一点（可选） */
-			ul li:first-child .list-img-wrapper {
-				aspect-ratio: 21 / 9 !important;
+				margin-bottom: 1rem;
+				background: #f0f0f0;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 			}
 
-			.list-img-wrapper img {
+			/* 第一张大图的比例可以稍微扁一点，更有设计感 */
+			ul li:first-child .pc-image-wrapper {
+				aspect-ratio: 21 / 9; 
+			}
+
+			.pc-image-wrapper img {
 				width: 100% !important;
 				height: 100% !important;
-				object-fit: cover !important; /* 核心：不拉伸，自动填充 */
+				object-fit: cover !important; /* 强制填充，不拉伸 */
 				display: block;
-				transition: transform 0.3s ease;
+				transition: transform 0.4s ease;
 			}
 
 			ul li a {
 				display: block;
 				text-decoration: none;
 			}
+
+			/* 标题样式：精致、克制 */
 			.blog-post-title {
-				margin: 0;
+				margin: 0.5rem 0 0.3rem 0;
 				color: #222;
-				font-size: 1.1rem;
+				font-size: 1.15rem; /* 电脑端稍大一点点 */
 				font-weight: 400;
 				line-height: 1.4;
+				letter-spacing: 0.02em;
 			}
+
 			.date {
 				margin: 0;
-				color: #888;
+				color: #999;
 				font-size: 0.85rem;
 			}
 
-			/* 悬停效果 */
+			/* 悬停交互 */
 			ul li a:hover img {
 				transform: scale(1.03);
 			}
+			ul li a:hover .blog-post-title {
+				color: #000;
+			}
 
+			/* 移动端适配 */
 			@media (max-width: 720px) {
-				ul { gap: 1.5rem; }
+				ul { gap: 2rem; }
 				ul li { width: 100% !important; }
-				.list-img-wrapper, ul li:first-child .list-img-wrapper {
+				.pc-image-wrapper, ul li:first-child .pc-image-wrapper {
 					aspect-ratio: 16 / 9 !important;
 				}
 			}
@@ -103,13 +114,13 @@ const posts = (await getCollection('blog')).sort(
 						posts.map((post) => (
 							<li>
 								<a href={`/blog/${post.id}/`}>
-									<div class="list-img-wrapper">
+									<div class="pc-image-wrapper">
 										<img src={post.data.heroImage} alt="" />
 									</div>
 									<h4 class="blog-post-title">{post.data.title}</h4>
-									<p class="date">
+									<div class="date">
 										<FormattedDate date={post.data.pubDate} />
-									</p>
+									</div>
 								</a>
 							</li>
 						))
