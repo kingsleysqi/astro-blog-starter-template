@@ -7,46 +7,57 @@ import HeaderLink from './HeaderLink.astro';
     <div class="left">
       <h2>
         <a href="/" aria-label="Home">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="56" height="56">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="54" height="54">
             <defs>
-              <linearGradient id="vertical-bar-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%"   stop-color="#E0E0E0" stop-opacity="0.3" />
-                <stop offset="50%"  stop-color="#FFFFFF" stop-opacity="1" />
-                <stop offset="100%" stop-color="#A0A0A0" stop-opacity="0.3" />
+              <linearGradient id="jp-ink-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%"   stop-color="#333" stop-opacity="0" />
+                <stop offset="20%"  stop-color="#444" stop-opacity="0.8" />
+                <stop offset="50%"  stop-color="#000" stop-opacity="1" />
+                <stop offset="85%"  stop-color="#666" stop-opacity="0.6" />
+                <stop offset="100%" stop-color="#999" stop-opacity="0" />
               </linearGradient>
 
-              <linearGradient id="kq_main_metal" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%"   stop-color="#FFFFFF" />
-                <stop offset="40%"  stop-color="#DCDCDC" />
-                <stop offset="100%" stop-color="#999999" />
+              <linearGradient id="fine-wire" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stop-color="#000" />
+                <stop offset="100%" stop-color="#888" />
               </linearGradient>
             </defs>
 
-            <g fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path 
-                d="M 28 12 L 28 88" 
-                stroke="url(#vertical-bar-gradient)" 
-                stroke-width="17" 
-              />
+            <path
+              d="M 28 10 L 28 90"
+              stroke="url(#jp-ink-gradient)"
+              stroke-width="3" 
+              fill="none"
+            />
+            <path
+              d="M 31 25 L 31 75"
+              stroke="#e0e0e0"
+              stroke-width="0.5"
+              fill="none"
+            />
 
-              <path 
-                d="M 32 48 L 58 20" 
-                stroke="url(#kq_main_metal)" 
-                stroke-width="13" 
-              />
+            <path
+              d="M 28 45 L 60 15"
+              stroke="url(#fine-wire)"
+              stroke-width="1.5"
+              stroke-linecap="square"
+            />
 
-              <path 
-                d="M 54 38 A 20 20 0 1 1 48 76" 
-                stroke="url(#kq_main_metal)" 
-                stroke-width="12" 
-              />
+            <path
+              d="M 65 40 A 22 22 0 1 1 45 82"
+              stroke="#222"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              fill="none"
+            />
 
-              <path 
-                d="M 38 48 L 82 92" 
-                stroke="url(#kq_main_metal)" 
-                stroke-width="13" 
-              />
-            </g>
+            <path
+              d="M 35 45 L 85 95"
+              stroke="#000"
+              stroke-width="4"
+              stroke-linecap="butt"
+            />
+          </g>
           </svg>
         </a>
       </h2>
@@ -65,8 +76,8 @@ import HeaderLink from './HeaderLink.astro';
 <style>
   header {
     padding: 0 1.5rem;
-    background: #ffffff;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.02);
+    background: #fafafa; /* 稍微偏一点和纸的米白色 */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
   }
 
   nav {
@@ -75,40 +86,61 @@ import HeaderLink from './HeaderLink.astro';
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    height: 70px;
   }
 
   .left {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 2rem; /* 增加留白 */
   }
 
-  h2 { margin: 0; line-height: 1; }
-  h2 a { display: block; }
+  h2 a svg {
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  h2 a:hover svg {
+    transform: scale(1.05);
+  }
 
   .nav-divider {
     width: 1px;
-    height: 24px;
-    background: linear-gradient(to bottom, transparent, #e0e0e0, transparent);
+    height: 30px;
+    background: linear-gradient(to bottom, transparent, #ddd, transparent);
   }
 
   .internal-links {
     display: flex;
-    gap: 0.6rem;
+    gap: 1.5rem;
   }
 
   nav a {
-    padding: 0.8em 0.75em;
-    color: #444;
-    font-size: 0.95rem;
-    font-weight: 500;
+    color: #666;
+    font-size: 0.9rem;
+    font-family: "Hiragino Mincho ProN", "MS PMincho", serif; /* 使用日系衬线体 */
+    letter-spacing: 0.1em;
     text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    transition: color 0.3s ease;
   }
 
   nav a:hover, nav a.active {
     color: #000;
-    border-bottom-color: #444;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000;
+    transition: width 0.3s ease;
+  }
+
+  nav a:hover::after, nav a.active::after {
+    width: 100%;
   }
 </style>
