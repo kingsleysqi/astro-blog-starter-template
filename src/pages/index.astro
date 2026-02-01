@@ -9,15 +9,49 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			main {
+				width: calc(100% - 2em);
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 3em 1em;
+			}
+			.hero-image {
+				width: 100%;
+				border-radius: 16px; /* 增加圆角感 */
+				margin-bottom: 2rem;
+				box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+			}
+			h1 {
+				font-size: 3rem;
+				font-weight: 800;
+				margin-bottom: 0.5rem;
+				letter-spacing: -0.02em;
+			}
+			.tagline {
+				font-size: 1.2rem;
+				color: #555;
+				line-height: 1.6;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-   <h1>Kingsley Qi.</h1>
-   <img src="/blog-placeholder-4.jpg">
-   <p>Exploring the boundaries and design from Santo Tomas, Batangas.</p>
-			<p>
-
+			<h1>Kingsley Qi.</h1>
+			
+			<img class="hero-image" src="/blog-placeholder-4.jpg" alt="Featured Image">
+			
+			<div class="tagline">
+				<p>Exploring the boundaries of <strong>design & technology</strong> from Santo Tomas, Batangas.</p>
+			</div>
+			
+			<hr />
+			
+			<section>
+				<h2>Latest thoughts</h2>
+				<p>Check out my <a href="/blog">blog</a> for more articles.</p>
+			</section>
 		</main>
 		<Footer />
 	</body>
