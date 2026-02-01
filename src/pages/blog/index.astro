@@ -15,7 +15,8 @@ const posts = (await getCollection('blog')).sort(
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
+		<style is:global>
+			/* 强力全局样式：锁定所有博客列表图 */
 			main {
 				width: 960px;
 				max-width: calc(100% - 2em);
@@ -30,62 +31,65 @@ const posts = (await getCollection('blog')).sort(
 				margin: 0;
 				padding: 0;
 			}
+			/* 强制列表项在电脑端并排两列 */
 			ul li {
-				width: calc(50% - 1rem);
+				width: calc(50% - 1rem) !important;
 			}
-			
-			.image-container {
-				width: 100%;
-				aspect-ratio: 16 / 9; 
-				overflow: hidden;
-				border-radius: 12px;
+			/* 第一篇强制占满一行 */
+			ul li:first-child {
+				width: 100% !important;
 				margin-bottom: 1rem;
+			}
+
+			/* 【核心】比例盒子：彻底解决图片大小不一 */
+			.list-img-wrapper {
+				width: 100% !important;
+				aspect-ratio: 16 / 9 !important; /* 你可以根据喜好改成 3/2 */
+				overflow: hidden !important;
+				border-radius: 12px;
+				margin-bottom: 0.8rem;
 				background: #f5f5f5;
 			}
+			/* 针对第一篇可以更宽一点（可选） */
+			ul li:first-child .list-img-wrapper {
+				aspect-ratio: 21 / 9 !important;
+			}
 
-			.image-container img {
+			.list-img-wrapper img {
 				width: 100% !important;
 				height: 100% !important;
-				object-fit: cover !important;
-			}
-
-			ul li:first-child {
-				width: 100%;
-				margin-bottom: 2rem;
-			}
-			ul li:first-child .image-container {
-				aspect-ratio: 21 / 9; 
+				object-fit: cover !important; /* 核心：不拉伸，自动填充 */
+				display: block;
+				transition: transform 0.3s ease;
 			}
 
 			ul li a {
 				display: block;
 				text-decoration: none;
 			}
-
-			/* 重点修改：使用专用类名，不影响首页 */
 			.blog-post-title {
-				margin: 0.5rem 0 0.2rem 0;
+				margin: 0;
 				color: #222;
-				line-height: 1.4;
-				font-size: 1.1rem; /* 调小字体，匹配你首页的精致感 */
+				font-size: 1.1rem;
 				font-weight: 400;
-				letter-spacing: 0.05em;
+				line-height: 1.4;
 			}
-
 			.date {
 				margin: 0;
 				color: #888;
 				font-size: 0.85rem;
 			}
 
+			/* 悬停效果 */
+			ul li a:hover img {
+				transform: scale(1.03);
+			}
+
 			@media (max-width: 720px) {
-				ul { gap: 2rem; }
+				ul { gap: 1.5rem; }
 				ul li { width: 100% !important; }
-				.image-container, ul li:first-child .image-container {
-					aspect-ratio: 16 / 9;
-				}
-				.blog-post-title {
-					font-size: 1rem;
+				.list-img-wrapper, ul li:first-child .list-img-wrapper {
+					aspect-ratio: 16 / 9 !important;
 				}
 			}
 		</style>
@@ -99,8 +103,8 @@ const posts = (await getCollection('blog')).sort(
 						posts.map((post) => (
 							<li>
 								<a href={`/blog/${post.id}/`}>
-									<div class="image-container">
-										<img src={post.data.heroImage} alt={post.data.title} />
+									<div class="list-img-wrapper">
+										<img src={post.data.heroImage} alt="" />
 									</div>
 									<h4 class="blog-post-title">{post.data.title}</h4>
 									<p class="date">
