@@ -1,7 +1,7 @@
 ---
 title: "Origins and Flux | 溯源与流变"
 description: "The inaugural echo of KingsleyQi.com"
-pubDate: "Feb 01 2026"
+pubDate: "Feb 01 2060"
 heroImage: "/blog-placeholder-7.jpg"
 ---
 
