@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: kingsleyqi/astro-blog
+  repo: kingsleysqi/astro-blog-starter-template  # 修正了用户名和仓库名
   branch: main
   base_url: https://cool-forest-c1b4.kingsley-s-qi.workers.dev
   auth_endpoint: auth
