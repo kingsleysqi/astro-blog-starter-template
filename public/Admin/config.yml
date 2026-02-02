@@ -2,8 +2,10 @@ backend:
   name: github
   repo: kingsleyqi/astro-blog
   branch: main
+  base_url: https://cool-forest-c1b4.kingsley-s-qi.workers.dev
+  auth_endpoint: auth
 
-media_folder: "public" # 适配你截图显示的根目录图片存放方式
+media_folder: "public"
 public_folder: "/"
 
 collections:
