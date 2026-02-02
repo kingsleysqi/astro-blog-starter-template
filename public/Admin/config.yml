@@ -1,1 +1,21 @@
+backend:
+  name: github
+  repo: kingsleyqi/astro-blog  # 如果你的仓库名不是 astro-blog，请修改这里
+  branch: main # 确保你的分支名是 main
+
+media_folder: "public/blog" # 适配你截图中的目录
+public_folder: "/blog"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Pub Date", name: "pubDate", widget: "datetime" }
+      - { label: "Hero Image", name: "heroImage", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
 
