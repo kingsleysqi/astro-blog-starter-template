@@ -1,36 +1,36 @@
 ---
-title: "Project Identity: Building a Digital Headquarters | 项目实战：构建个人数字总部"
-description: "从基础设施到视觉识别：关于 kingsleyqi.com 数字化重构的全过程记录。"
+title: "The Anatomy of Intent | 意图的解剖：为何在指尖修筑孤岛"
+description: "深挖 kingsleyqi.com 背后关于控制、主权与精神定居的真实心思。"
 pubDate: "Feb 04 2026"
-heroImage: "/blog-placeholder-3.jpg"
+heroImage: "/anatomy-of-intent.jpg"
 ---
 
 <div class="bilingual-blog">
 
 <section>
-<p class="en">From February 1st to today, I have completed a comprehensive transformation of my digital presence. This was not merely a website update, but a full-stack project execution involving infrastructure, brand identity, and automated workflows.</p>
-<p class="zh">从2月1日到今天，我完成了一次数字存在感的全面重构。这不仅是一次简单的网站更新，而是一次涵盖了基础设施、品牌识别和自动化工作流的全栈项目实战。</p>
+<p class="en">Building this digital space was never about technology; it was an act of psychological reclamation. In an age where our identities are rented from platforms and our attention is harvested by algorithms, I felt an urgent need to drive a stake into the ground. kingsleyqi.com is not a portfolio; it is my 'Digital Sovereignty'—the only place in the vast noise of the internet where I do not have to ask for permission to exist.</p>
+<p class="zh">修筑这片数字空间从未关乎技术，它是一次心理层面的“确权”。在这个身份被平台租借、注意力被算法收割的时代，我感受到一种紧迫的冲动，要在荒野中打下一枚木桩。kingsleyqi.com 并非一份作品集，它是我的“数字主权”——是在浩瀚嘈杂的互联网中，唯一一个我无需向任何人请求许可便能存在的地方。</p>
 </section>
 
 <hr class="dot-divider" />
 
 <section>
-<p class="en">On the infrastructure level, I secured the top-level domain kingsleyqi.com and established a professional communication layer by binding custom domain emails with WeCom (Enterprise WeChat). This ensures that every touchpoint of my brand—from the URL to the inbox—is unified and professional.</p>
-<p class="zh">在基础设施层面，我确立了顶级域名 kingsleyqi.com，并通过域名邮箱与企业微信的深度绑定，建立了职业化的通信链路。这确保了品牌从网址到收件箱的每一个触点都保持高度统一与专业。</p>
+<p class="en">Choosing to build this exclusively via a mobile device was a self-imposed monastic discipline. The smartphone, usually a tool of distraction and consumption, was transformed into a chisel. This constraint forced a brutal clarity of mind: when the screen is small and the signal in Batangas is fleeting, you stop chasing the decorative and start building the essential. Every line of code was a dialogue, a process of stripping away the 'self' that likes to perform, and finding the 'self' that likes to construct.</p>
+<p class="zh">选择完全通过手机来构建，是一种自发的“修道”。手机本是分心与消费的工具，却被我强行扭转为一把凿子。这种限制逼出了一种近乎残酷的清醒：当屏幕狭小、巴丹加斯的信号明灭不定时，你便不再追求虚饰，转而构建本质。每一行代码都是一场对话，一个剥离掉那个“爱表演的自我”、寻找那个“爱建筑的自我”的过程。</p>
 </section>
 
 <hr class="dot-divider" />
 
 <section>
-<p class="en">The management layer was bolstered by deploying a self-hosted Decap CMS via Cloudflare Workers. Coupled with a GitHub Actions CI/CD pipeline, I have built a seamless "write-and-deploy" engine that allows me to manage my digital garden from anywhere, even from the streets of Batangas.</p>
-<p class="zh">在管理层面，我通过 Cloudflare Workers 部署了自托管的 Decap CMS。配合 GitHub Actions 的自动化部署流，我构建了一套无缝的“创作即发布”引擎，让我即使身在巴丹加斯的街头，也能随时随地打理我的数字园林。</p>
+<p class="en">The obsession with 'Smoothness' (润) is my response to the friction of reality. To be 'Smooth' means to have engineered away the chaos. By binding my domain, my emails, and my professional workspace into one seamless loop, I am creating a reality where my internal logic dictates the flow, not the external world. It is a quiet rebellion against the fragmented nature of modern life—a way to ensure that even in a remote corner of the Philippines, my professional presence remains as intentional and frictionless as a polished stone.</p>
+<p class="zh">对“润”的执念，是我对现实摩擦力的回应。“润”意味着通过工程手段消解了混乱。通过将域名、邮箱与职业协作空间绑定成一个无缝的闭环，我创造了一个由内在逻辑主导流向、而非被外界左右的现实。这是对碎片化现代生活的一次安静反叛——确保即使身处菲律宾偏僻的一角，我的职业存在感依然如同一枚被打磨过的石子，充满意图且毫无阻滞。</p>
 </section>
 
 <hr class="dot-divider" />
 
 <section>
-<p class="en">Finally, the visual identity was anchored by the "Digital Architect" philosophy. The deconstructed Logo—a fusion of the letters K and Q—embodies a balance between logic and humanistic warmth. It is a design defined not by what can be added, but by what is no longer necessary to remove.</p>
-<p class="zh">最后，视觉识别系统植根于“数字建筑师”的哲学。由字母 K 与 Q 融合而成的解构主义 Logo，体现了理性逻辑与人文温度的平衡。这种设计不在于无以复加，而在于无从删减。</p>
+<p class="en">Ultimately, this project is a settlement for the soul. Between the vast mountains and the silent code, I found that freedom is not found in wandering, but in the precision of building. I don't just want to be a 'Digital Nomad' drifting through the web; I want to be a 'Digital Architect' standing firm in a home of my own making. This is where I settle, where I think, and where I begin.</p>
+<p class="zh">最终，这个项目是灵魂的一次定居。在辽阔的山川与沉默的代码之间，我发现自由并不存在于流浪中，而存在于构建的精确性里。我不愿做一个在网络中漂泊的“数字游牧者”，我愿做一个立于亲手修筑的家园里的“数字建筑师”。在此处，我定居，我思考，我开启未来。</p>
 </section>
 
 </div>
