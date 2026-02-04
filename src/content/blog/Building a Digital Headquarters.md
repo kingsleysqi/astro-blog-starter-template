@@ -2,7 +2,7 @@
 title: "The Silent Masonry | 沉默的堆砌：在方寸之间显化主权"
 description: "记录 2026.02.01 - 2026.02.04，在巴丹加斯的山野中，一场关于意图、共谋与定居的私人实验。"
 pubDate: "Feb 04 2026"
-heroImage: "/the-sovereign-coordinate.jpg"
+heroImage: "/blog-placeholder-3.jpg"
 ---
 
 <div class="bilingual-blog">
