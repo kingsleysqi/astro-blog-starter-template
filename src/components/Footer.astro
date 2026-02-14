@@ -22,6 +22,12 @@ const today = new Date();
                 <span class="mail-label">Connect /</span> i@kingsleyqi.com
             </a>
             
+            <span class="footer-sep">|</span>
+
+            <a href="https://kingsleyqi.cn" class="mail-link" target="_blank">
+                <span class="mail-label">Archive /</span> kingsleyqi.cn
+            </a>
+            
             <p class="copyright">
                 &copy; {today.getFullYear()} Kingsley Qi. 
                 <span class="location">Santo Tomas, Batangas</span>
@@ -33,7 +39,7 @@ const today = new Date();
 <style>
     footer {
         padding: 6rem 1.5rem 4rem 1.5rem;
-        background: #ffffff; /* 放弃渐变，回归纯净的白 */
+        background: #ffffff; 
         border-top: 1px solid #f9f9f9;
     }
 
@@ -77,19 +83,26 @@ const today = new Date();
         border-top: 1px solid #ddd;
     }
 
-    /* 邮箱设计：去掉了刺眼的蓝色 */
+    /* 链接设计：JetBrains Mono 增加技术感 */
     .mail-link {
-        font-family: "JetBrains Mono", monospace; /* 增加一点技术感 */
+        font-family: "JetBrains Mono", monospace; 
         font-size: 0.95rem;
         color: #222;
         text-decoration: none;
         letter-spacing: 0.05em;
         transition: opacity 0.3s ease;
+        display: inline-block;
     }
 
     .mail-label {
         color: #bbb;
         margin-right: 0.5rem;
+    }
+
+    .footer-sep {
+        color: #eee;
+        margin: 0 1rem;
+        font-weight: 100;
     }
 
     .mail-link:hover {
@@ -112,5 +125,7 @@ const today = new Date();
     @media (max-width: 600px) {
         .zh-f { font-size: 0.95rem; letter-spacing: 0.1em; }
         .en-f { font-size: 0.85rem; }
+        .footer-sep { display: none; } /* 移动端隐藏分隔符 */
+        .mail-link { display: block; margin-bottom: 1rem; } /* 移动端链接换行 */
     }
 </style>
