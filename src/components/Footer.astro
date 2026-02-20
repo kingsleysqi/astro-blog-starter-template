@@ -1,8 +1,4 @@
----
-const today = new Date();
----
-
-<footer>
+<footer role="contentinfo">
     <div class="footer-container">
         <div class="philosophy">
             <div class="footer-group">
@@ -18,28 +14,34 @@ const today = new Date();
         <hr class="footer-divider" />
 
         <div class="contact-zone">
-            <a href="mailto:i@kingsleyqi.com?subject=Hello%20Kingsley" class="mail-link">
+            <a href="mailto:i@kingsleyqi.com?subject=Hello%20Kingsley&body=Hi%20Kingsley%2C%0A%0AI%20came%20from%20your%20website...%0A%0A" 
+               class="mail-link" aria-label="Send email to i@kingsleyqi.com">
                 <span class="mail-label">Connect /</span> i@kingsleyqi.com
             </a>
             
             <span class="footer-sep">|</span>
 
-            <a href="https://kingsleyqi.cn" class="mail-link" target="_blank">
+            <a href="https://kingsleyqi.cn" class="mail-link" target="_blank" rel="noopener noreferrer" aria-label="Visit archive at kingsleyqi.cn">
                 <span class="mail-label">Archive /</span> kingsleyqi.cn
             </a>
             
             <p class="copyright">
-                &copy; {today.getFullYear()} Kingsley Qi. 
+                © <span id="current-year">2026</span> Kingsley Qi. 
                 <span class="location">Santo Tomas, Batangas</span>
             </p>
         </div>
     </div>
 </footer>
 
+<script>
+    // 动态更新年份（防未来过期）
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
 <style>
     footer {
-        padding: 6rem 1.5rem 4rem 1.5rem;
-        background: #ffffff; 
+        padding: 6rem 1.5rem 4rem;
+        background: #ffffff;
         border-top: 1px solid #f9f9f9;
     }
 
@@ -54,20 +56,18 @@ const today = new Date();
     }
 
     .footer-group {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
 
-    /* 英文：柔和的灰，衬线斜体 */
     .en-f {
-        font-family: Georgia, serif;
+        font-family: Georgia, 'Times New Roman', serif;
         font-style: italic;
         font-size: 1rem;
         color: #aaa;
-        margin-bottom: 0.4rem;
+        margin: 0 0 0.4rem;
         letter-spacing: 0.02em;
     }
 
-    /* 中文：深色，高间距，呼吸感 */
     .zh-f {
         font-size: 1.1rem;
         letter-spacing: 0.2em;
@@ -83,14 +83,13 @@ const today = new Date();
         border-top: 1px solid #ddd;
     }
 
-    /* 链接设计：JetBrains Mono 增加技术感 */
     .mail-link {
-        font-family: "JetBrains Mono", monospace; 
+        font-family: "JetBrains Mono", "SF Mono", Menlo, monospace;
         font-size: 0.95rem;
         color: #222;
         text-decoration: none;
         letter-spacing: 0.05em;
-        transition: opacity 0.3s ease;
+        transition: all 0.3s ease;
         display: inline-block;
     }
 
@@ -101,16 +100,18 @@ const today = new Date();
 
     .footer-sep {
         color: #eee;
-        margin: 0 1rem;
+        margin: 0 1.2rem;
         font-weight: 100;
     }
 
-    .mail-link:hover {
-        opacity: 0.6;
+    .mail-link:hover,
+    .mail-link:focus {
+        opacity: 0.7;
+        transform: scale(1.02);
     }
 
     .copyright {
-        margin-top: 2rem;
+        margin-top: 2.5rem;
         font-size: 0.75rem;
         color: #ccc;
         text-transform: uppercase;
@@ -123,9 +124,11 @@ const today = new Date();
     }
 
     @media (max-width: 600px) {
-        .zh-f { font-size: 0.95rem; letter-spacing: 0.1em; }
-        .en-f { font-size: 0.85rem; }
-        .footer-sep { display: none; } /* 移动端隐藏分隔符 */
-        .mail-link { display: block; margin-bottom: 1rem; } /* 移动端链接换行 */
+        .zh-f { font-size: 0.95rem; letter-spacing: 0.12em; }
+        .en-f { font-size: 0.9rem; }
+        .footer-sep { display: none; }
+        .mail-link { display: block; margin: 0.8rem 0; }
+        .philosophy { margin-bottom: 4rem; }
+        footer { padding: 4rem 1rem 3rem; }
     }
 </style>
