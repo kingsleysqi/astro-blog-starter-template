@@ -2,7 +2,7 @@
 title: "The Logic Threshold | 维度的边界：从检索到觉醒的孤岛"
 description: "记录 2026.02.23。当知识成为一种平庸的堆砌，我们在算法的荒原中寻找一种真正的“自持”。"
 pubDate: "Feb 23 2026"
-heroImage: "/blog-placeholder-2.jpg"
+heroImage: "/blog-placeholder-5.jpg"
 ---
 
 <div class="bilingual-blog">
