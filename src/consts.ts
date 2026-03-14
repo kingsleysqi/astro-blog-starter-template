@@ -3,3 +3,7 @@
 
 export const SITE_TITLE = "Kingsley Qi - KQ | Design & Technology Explorer";
 export const SITE_DESCRIPTION = "Kingsley Qi (KQ) - 设计与技术边界探索者 | 在锐利中寻圆润，在缺失中见完整。个人作品、思考与生活记录。";
+export const AUTHOR_NAME = "Kingsley Qi";
+export const AUTHOR_EMAIL = "i@kingsleyqi.com";
+export const SITE_URL = "https://www.kingsleyqi.com";
+export const SLOGAN_CN = "在锐利中寻圆润，在缺失中见完整。";
