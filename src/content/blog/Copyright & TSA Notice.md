@@ -34,8 +34,8 @@ heroImage: "/blog-placeholder-copyright.jpg"
 <hr class="dot-divider" />
 
 <section>
-<p class="en">Beyond the authenticated LOGO, all original text, imagery, and code published on this site are protected. Redistribution requires clear attribution to "kq" with a direct link to the original source. Any commercial use or derivative modification without explicit written consent is strictly prohibited.</p>
-<p class="zh">除上述已存证的 LOGO 外，本站发布的各类原创文字、图片及代码内容均受版权保护。转载须明确注明作者为“kq”并保留原始网页链接。未经书面许可，严禁将本站内容用于商业用途或进行任何形式的歪曲洗稿。</p>
+<p class="en">Beyond the authenticated LOGO, all original text, imagery, and code published on this site are protected. Redistribution requires clear attribution to "Kingsley Qi" with a direct link to the original source. Any commercial use or derivative modification without explicit written consent is strictly prohibited.</p>
+<p class="zh">除上述已存证的 LOGO 外，本站发布的各类原创文字、图片及代码内容均受版权保护。转载须明确注明作者为“Kingsley Qi”并保留原始网页链接。未经书面许可，严禁将本站内容用于商业用途或进行任何形式的歪曲洗稿。</p>
 </section>
 
 <section>
