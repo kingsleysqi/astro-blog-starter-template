@@ -3,16 +3,27 @@ import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
-  <nav class="header-nav">
+
+<nav class="header-nav">
     <div class="nav-left">
       <div class="logo-wrapper">
         <a href="/" aria-label="Home">
-          <img 
-            src="/favicon.svg"   <!-- 用你有的 SVG，清晰优先 -->
-            alt="Kingsley Qi Logo"
-            width="56"
-            height="56"
-          />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="56" height="56">
+            <defs>
+              <linearGradient id="k-stem-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#fff" stop-opacity="0" />
+                <stop offset="20%" stop-color="#fff" stop-opacity="0.9" />
+                <stop offset="80%" stop-color="#fff" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="#fff" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M 65 35 A 21 21 0 1 1 48 78" stroke="#ccc" stroke-width="10" />
+              <path d="M 38 48 L 62 20" stroke="#eee" stroke-width="12" />
+              <path d="M 38 52 L 80 92" stroke="#eee" stroke-width="14" />
+              <path d="M 28 12 L 28 88" stroke="url(#k-stem-gradient)" stroke-width="19" />
+            </g>
+          </svg>
         </a>
       </div>
 
@@ -28,13 +39,13 @@ import HeaderLink from './HeaderLink.astro';
 </header>
 
 <style>
-  /* 原有样式保留，只简化并加关键保护 */
+  /* 基础布局：强制页头高度和白色背景 */
   header {
     margin: 0;
     padding: 0;
     background: #ffffff;
     box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-    height: 70px;
+    height: 70px; /* 固定高度 */
     display: flex;
     align-items: center;
   }
@@ -60,20 +71,14 @@ import HeaderLink from './HeaderLink.astro';
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    min-width: 60px;     /* 强制宽度不塌 */
-    height: 56px;
-    min-height: 56px;    /* 强制高度不塌 */
+    width: 60px; /* 锁定 Logo 容器宽度 */
   }
 
-  .logo-wrapper img {
-    display: block;
-    width: 56px;
-    height: 56px;
-    object-fit: contain; /* 保持比例 */
+  .logo-wrapper a {
+    display: flex;
+    align-items: center;
   }
 
-  /* 其他样式保持原样 */
   .nav-divider {
     width: 1px;
     height: 24px;
@@ -86,9 +91,10 @@ import HeaderLink from './HeaderLink.astro';
     height: 100%;
   }
 
+  /* 导航项样式 + 底部横杠提示 */
   .internal-links :global(a) {
     padding: 0 1rem;
-    height: 70px;
+    height: 70px; /* 与页头同高，确保横杠在最底部 */
     display: flex;
     align-items: center;
     color: #444;
@@ -103,6 +109,7 @@ import HeaderLink from './HeaderLink.astro';
     color: #000;
   }
 
+  /* 底部横杠：找回之前的样式 */
   .internal-links :global(a.active::after),
   .internal-links :global(a:hover::after) {
     content: '';
