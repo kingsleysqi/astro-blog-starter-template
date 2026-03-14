@@ -25,16 +25,27 @@
                 <span class="mail-label">Archive /</span> kingsleyqi.cn
             </a>
             
-            <p class="copyright">
-                © <span id="current-year">2026</span> Kingsley Qi. 
-                <span class="location">Santo Tomas, Batangas</span>
-            </p>
+            <div class="copyright-container">
+                <p class="copyright">
+                    © <span id="current-year">2026</span> Kingsley Qi. 
+                    <span class="location">Santo Tomas, Batangas</span>
+                </p>
+
+                <div class="logo-protection">
+                    <a href="https://kingsleyqi.com" target="_blank" rel="noopener noreferrer" class="protection-link">
+                        Logo Design by Qi Shanchuan
+                    </a>
+                    <span class="protection-sep">·</span>
+                    <a href="https://kingsleyqi.com" target="_blank" rel="noopener noreferrer" class="protection-link cert-no">
+                        TSA-11-20260315155929599
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
 
 <script>
-    // 动态更新年份（防未来过期）
     document.getElementById('current-year').textContent = new Date().getFullYear();
 </script>
 
@@ -112,6 +123,7 @@
 
     .copyright {
         margin-top: 2.5rem;
+        margin-bottom: 0.5rem;
         font-size: 0.75rem;
         color: #ccc;
         text-transform: uppercase;
@@ -123,6 +135,36 @@
         font-style: italic;
     }
 
+    /* 新增：Logo 保护样式 */
+    .logo-protection {
+        font-size: 0.7rem;
+        color: #ddd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.2rem;
+    }
+
+    .protection-link {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .protection-link:hover {
+        color: #999;
+    }
+
+    .cert-no {
+        font-family: "JetBrains Mono", monospace;
+        letter-spacing: -0.02em;
+    }
+
+    .protection-sep {
+        opacity: 0.5;
+    }
+
     @media (max-width: 600px) {
         .zh-f { font-size: 0.95rem; letter-spacing: 0.12em; }
         .en-f { font-size: 0.9rem; }
@@ -130,5 +172,7 @@
         .mail-link { display: block; margin: 0.8rem 0; }
         .philosophy { margin-bottom: 4rem; }
         footer { padding: 4rem 1rem 3rem; }
+        .logo-protection { flex-direction: column; gap: 0.2rem; }
+        .protection-sep { display: none; }
     }
 </style>
