@@ -8,7 +8,7 @@ import HeaderLink from './HeaderLink.astro';
       <div class="logo-wrapper">
         <a href="/" aria-label="Home">
           <img 
-            src="/web-app-manifest-512x512.png"  <!-- ← 这里放你想要的图片路径 -->
+            src="/web-app-manifest-512x512.png"
             alt="Kingsley Qi Logo"
             width="56"
             height="56"
@@ -29,18 +29,13 @@ import HeaderLink from './HeaderLink.astro';
 
 <style>
   /* 你的原样式保持不变 */
-  
-  /* 加这个，让新图片正常显示（非常重要） */
+
+  /* 加这个，确保图片正常显示，不乱布局 */
   .logo-wrapper img {
     display: block;
     width: 56px;
     height: 56px;
-    object-fit: contain;  /* 保持比例，不拉伸变形 */
-    vertical-align: middle;  /* 垂直居中对齐 */
+    object-fit: contain;       /* 保持比例 */
+    vertical-align: middle;    /* 垂直居中 */
   }
-
-  /* 如果图片太亮或太暗，可加滤镜调整（可选） */
-  /* .logo-wrapper img {
-    filter: brightness(1.1) contrast(1.05);
-  } */
 </style>
