@@ -8,11 +8,10 @@ import HeaderLink from './HeaderLink.astro';
       <div class="logo-wrapper">
         <a href="/" aria-label="Home">
           <img 
-            src="/favicon.svg"  <!-- 首选 SVG -->
+            src="/favicon.svg"   <!-- 换成这个试试，如果不行改成 "/favicon-96x96.png" -->
             alt="Kingsley Qi Logo"
             width="56"
             height="56"
-            onerror="this.src='/favicon-96x96.png'"  <!-- fallback 到 PNG -->
           />
         </a>
       </div>
@@ -29,27 +28,25 @@ import HeaderLink from './HeaderLink.astro';
 </header>
 
 <style>
-  /* 原有样式全部保留 */
+  /* 你的原样式全部保留，不要删 */
 
+  /* 加这些保护布局 */
   .logo-wrapper {
-    width: 60px;
-    min-height: 56px;               /* 防止图片加载失败高度塌陷 */
+    width: 60px !important;
+    min-width: 60px !important;
+    height: 56px !important;
+    min-height: 56px !important;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
   }
 
   .logo-wrapper img {
     display: block;
     width: 56px;
     height: 56px;
-    object-fit: contain;            /* 保持比例，不变形 */
+    object-fit: contain;
     vertical-align: middle;
   }
-
-  /* 加载失败时显示 fallback 文字（可选） */
-  .logo-wrapper img:not([src]),
-  .logo-wrapper img[src=""] {
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext x='50' y='55' font-size='50' text-anchor='middle'%3EKQ%3C/text%3E%3C/svg%3E");  /* 内联 fallback SVG 文字 KQ */
-  }
-</style>G
+</style>
