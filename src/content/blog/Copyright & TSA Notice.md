@@ -8,8 +8,8 @@ heroImage: "/blog-placeholder-copyright.jpg"
 <div class="bilingual-blog">
 
 <section>
-<p class="en">The personal LOGO design used on this site is an original work by the author and has been officially recorded through the <strong>UniTrust TimeStamp Authority (TSA)</strong>. [span_0](start_span)[span_1](start_span)This digital certification provides conclusive legal evidence of the work's existence and integrity from the moment of registration[span_0](end_span)[span_1](end_span).</p>
-[span_2](start_span)[span_3](start_span)<p class="zh">本站所使用的个人 LOGO 设计作品由作者原创，并已通过<strong>联合信任时间戳服务中心（TSA）</strong>完成版权存证[span_2](end_span)[span_3](end_span)[span_4](start_span)[span_5](start_span)。该数字化认证为作品自申请时刻起的真实存在性与完整性提供了确凿的法律证据[span_4](end_span)[span_5](end_span)。</p>
+[span_0](start_span)[span_1](start_span)<p class="en">The personal LOGO design used on this site is an original work by the author and has been officially recorded through the <strong>UniTrust TimeStamp Authority (TSA)</strong>[span_0](end_span)[span_1](end_span). [span_2](start_span)This digital certification provides conclusive legal evidence of the work's existence and integrity from the moment of registration[span_2](end_span).</p>
+[span_3](start_span)[span_4](start_span)<p class="zh">本站所使用的个人 LOGO 设计作品由作者原创，并已通过<strong>联合信任时间戳服务中心（TSA）</strong>完成版权存证[span_3](end_span)[span_4](end_span)[span_5](start_span)。该数字化认证为作品自申请时刻起的真实存在性与完整性提供了确凿的法律证据[span_5](end_span)。</p>
 </section>
 
 <hr class="dot-divider" />
@@ -45,8 +45,8 @@ heroImage: "/blog-placeholder-copyright.jpg"
 <hr class="dot-divider" />
 
 <section>
-[span_24](start_span)[span_25](start_span)<p class="en">The integrity of the digital record ensures that the original data has remained untampered since its inception[span_24](end_span)[span_25](end_span). [span_26](start_span)We reserve the right to utilize these timestamps as judicial evidence to pursue legal action against any unauthorized use or infringement[span_26](end_span). [span_27](start_span)[span_28](start_span)The author possesses comprehensive copyrights, including but not limited to the rights of publication, authorship, and information network dissemination[span_27](end_span)[span_28](end_span).</p>
-[span_29](start_span)[span_30](start_span)<p class="zh">数字化记录的整全性确保了原始数据自诞生起便未被篡改[span_29](end_span)[span_30](end_span)[span_31](start_span)。本人保留利用可信时间戳作为司法证据，依法追究一切未经授权使用或侵权行为的权利[span_31](end_span)[span_32](start_span)[span_33](start_span)。作者拥有该作品完整的著作权，包括但不限于发表权、署名权及信息网络传播权等[span_32](end_span)[span_33](end_span)。</p>
+[span_24](start_span)<p class="en">The integrity of the digital record ensures that the original data has remained untampered since its inception[span_24](end_span). [span_25](start_span)[span_26](start_span)We reserve the right to utilize these timestamps as judicial evidence to pursue legal action against any unauthorized use or infringement[span_25](end_span)[span_26](end_span). [span_27](start_span)[span_28](start_span)The author possesses comprehensive copyrights, including but not limited to the rights of publication, authorship, and information network dissemination[span_27](end_span)[span_28](end_span).</p>
+[span_29](start_span)<p class="zh">数字化记录的整全性确保了原始数据自诞生起便未被篡改[span_29](end_span)[span_30](start_span)[span_31](start_span)。本人保留利用可信时间戳作为司法证据，依法追究一切未经授权使用或侵权行为的权利[span_30](end_span)[span_31](end_span)[span_32](start_span)[span_33](start_span)。作者拥有该作品完整的著作权，包括但不限于发表权、署名权及信息网络传播权等[span_32](end_span)[span_33](end_span)。</p>
 </section>
 
 </div>
@@ -54,19 +54,14 @@ heroImage: "/blog-placeholder-copyright.jpg"
 <style>
   .bilingual-blog section { margin-bottom: 4rem; }
   .bilingual-blog .en {
-    font-family: 'Times New Roman', Georgia, serif;
+    font-family: serif;
     font-style: italic;
-    font-size: 1.05rem;
     color: #666;
     line-height: 2;
     margin-bottom: 0.8rem;
-    letter-spacing: 0.01em;
   }
   .bilingual-blog .zh {
-    font-size: 1.1rem;
     color: #1a1a1a;
-    letter-spacing: 0.15em;
-    font-weight: 300;
     line-height: 2.5;
   }
   .dot-divider {
