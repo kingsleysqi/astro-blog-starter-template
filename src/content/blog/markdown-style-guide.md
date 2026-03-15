@@ -45,10 +45,6 @@ heroImage: "/blog-placeholder-copyright.jpg"
 
 <hr class="dot-divider" />
 
-<section>
-<p class="en">Notice: Content on this site is copyright protected. View the <a href="https://kingsleyqi.com/blog/markdown-style-guide/" style="color: inherit; text-decoration: underline;">LOGO Authentication & Copyright Protocol</a>.</p>
-<p class="zh">说明：本站内容受版权保护，查看 <a href="https://kingsleyqi.com/blog/markdown-style-guide/" style="color: inherit; text-decoration: underline;">LOGO 存证与版权协议</a>。</p>
-</section>
 
 </div>
 
