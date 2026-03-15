@@ -42,26 +42,23 @@ import Layout from '../layouts/BlogPost.astro';
 					<p class="en">Completeness is precious, but an unfinished circle possesses more vitality. It leaves an opening for the wind to pass and for the soul to enter. Two symbols gaze at each other in silence, never touching, yet reaching a balance within that invisible negative space.</p>
 					<p class="zh">圆满固然可贵，但未竟之圆却更具生命力。因为它留出了一个缺口，让清风可以穿行，让灵魂可以出入。两个符号在无声中遥遥相望，互不干涉，却在中间那抹看不见的负空间里，达成了一种平衡。</p>
 				</div>
-
-   <div class="para-group">
-   
-  </div>
-
-   <section>
-   <p class="en">Notice: Content on this site is copyright protected. View the <a href="https://kingsleyqi.com/blog/copyright--tsa-notice/" style="color: inherit; text-decoration: underline;">LOGO Authentication & Copyright Protocol</a>.</p>
-   <p class="zh">说明：本站内容受版权保护，查看 <a href="https://kingsleyqi.com/blog/copyright--tsa-notice/" style="color: inherit; text-decoration: underline;">LOGO 存证与版权协议</a>。</p>
-   </section>
-
 			</div>
+
+			<hr class="dot-divider" />
+
+			<section class="copyright-section">
+				<p class="en">Notice: Content on this site is copyright protected. View the <a href="https://kingsleyqi.com/blog/copyright--tsa-notice/" class="legal-link">LOGO Authentication & Copyright Protocol</a>.</p>
+				<p class="zh">说明：本站内容受版权保护，查看 <a href="https://kingsleyqi.com/blog/copyright--tsa-notice/" class="legal-link">LOGO 存证与版权协议</a>。</p>
+			</section>
+
 		</section>
-        </div>
+	</div>
 </Layout>
 
 <style>
 	.about-content {
 		max-width: 68ch;
 		margin: 0 auto;
-		/* 底部 padding 增加到 12rem，给 Footer 留出足够的视觉空间，避免重复感 */
 		padding: 4rem 1.5rem 12rem 1.5rem; 
 		line-height: 2;
 	}
@@ -123,6 +120,25 @@ import Layout from '../layouts/BlogPost.astro';
 		letter-spacing: 0.4em;
 		text-transform: uppercase;
 		margin-top: 0.4rem;
+	}
+
+	/* 新增样式 */
+	.dot-divider {
+		border: none;
+		border-top: 1px solid #eee;
+		width: 40px;
+		margin: 8rem auto 4rem auto; /* 增加与正文的距离 */
+	}
+
+	.copyright-section {
+		opacity: 0.7;
+		text-align: center; /* 居中显示更像页脚 */
+	}
+
+	.legal-link {
+		color: inherit;
+		text-decoration: underline;
+		text-underline-offset: 4px;
 	}
 
 	@media (max-width: 600px) {
