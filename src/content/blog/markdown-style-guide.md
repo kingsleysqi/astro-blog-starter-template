@@ -2,7 +2,7 @@
 title: "About Me | 关于我"
 description: "A reflection on the search for order, the vanishing spine, and the mercy of moistness."
 pubDate: "Feb 01 2026"
-heroImage: "/blog-placeholder-about.jpg"
+heroImage: "/blog-placeholder-6.jpg"
 ---
 
 <div class="bilingual-blog">
