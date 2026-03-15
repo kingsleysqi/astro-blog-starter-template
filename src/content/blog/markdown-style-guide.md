@@ -1,39 +1,62 @@
 ---
-title: "Origins and Flux | 溯源与流变"
-description: "The inaugural echo of KingsleyQi.com"
-pubDate: "Feb 01 2060"
-heroImage: "/blog-placeholder-7.jpg"
+title: "Copyright & TSA Notice | 版权声明与存证公示"
+description: "Legal notice regarding the original LOGO design and content ownership for kingsleyqi.com and kingsleyqi.cn."
+pubDate: "Mar 15 2026"
+heroImage: "/blog-placeholder-copyright.jpg"
 ---
 
 <div class="bilingual-blog">
 
 <section>
-<p class="en">In an era defined by ephemeral scrolls and fragmented thoughts, the act of building a "home" for one's mind feels like an act of quiet rebellion.</p>
-<p class="zh">在这个被碎片化思维和瞬时滑动定义的时代，为自己的思想营建一座“家园”，听起来像是一场无声的叛逆。</p>
+<p class="en">The personal LOGO design used on this site is an original work by the author and has been officially recorded through the <strong>UniTrust TimeStamp Authority (TSA)</strong>. This digital certification provides conclusive legal evidence of the work's existence and integrity from the moment of registration.</p>
+<p class="zh">本站所使用的个人 LOGO 设计作品由作者原创，并已通过<strong>联合信任时间戳服务中心（TSA）</strong>完成版权存证。该数字化认证为作品自申请时刻起的真实存在性与完整性提供了确凿的法律证据。</p>
 </section>
 
 <section>
-<p class="en">We are often so consumed by the speed of technology that we forget the texture of the tools we use. This space, KingsleyQi.com, is my attempt to slow down—to find the "moistness" within the cold logic of code.</p>
-<p class="zh">我们常常沉溺于技术的更迭速度，却忘了工具本身的质感。这个空间，KingsleyQi.com，是我尝试慢下来的努力——在冰冷的编程逻辑中，寻找那一抹“润”意。</p>
+<p class="en">
+<strong>LOGO Authentication Details:</strong><br/>
+• Work Title: Personal LOGO Design<br/>
+• Certificate No: TSA-11-20260315155929599<br/>
+• Timestamp: 2026-03-15 05:59:14 (UTC+8)<br/>
+• Authority: UniTrust TimeStamp Authority<br/>
+• Authorized Domains: Kingsleyqi.com / Kingsleyqi.cn
+</p>
+<p class="zh">
+<strong>LOGO 存证详情：</strong><br/>
+• 作品名称：个人LOGO设计<br/>
+• 存证编号：TSA-11-20260315155929599<br/>
+• 存证时间：2026-03-15 05:59:14 (UTC+8)<br/>
+• 存证机构：联合信任时间戳服务中心<br/>
+• 授权域名：Kingsleyqi.com / Kingsleyqi.cn
+</p>
 </section>
 
 <hr class="dot-divider" />
 
 <section>
-<p class="en">You might have noticed the logo: a 'K' with its spine removed, a 'Q' that refuses to close. It is a metaphor for the state of learning. We are never truly "complete." The missing stroke is where the light gets in; the opening in the circle is where the dialogue begins.</p>
-<p class="zh">你或许已经注意到了那个标识：一个隐去了脊梁的 K，一个拒绝闭合的 Q。这是对学习状态的一种隐喻。我们从未真正“圆满”。那缺失的一笔是光照进来的地方，而圆环的缺口，则是对话开始的地方。</p>
+<p class="en">Beyond the authenticated LOGO, all original text, imagery, and code published on this site are protected. Redistribution requires clear attribution to "kq" with a direct link to the original source. Any commercial use or derivative modification without explicit written consent is strictly prohibited.</p>
+<p class="zh">除上述已存证的 LOGO 外，本站发布的各类原创文字、图片及代码内容均受版权保护。转载须明确注明作者为“kq”并保留原始网页链接。未经书面许可，严禁将本站内容用于商业用途或进行任何形式的歪曲洗稿。</p>
 </section>
 
+<section>
+<p class="en">The integrity of the digital record ensures that the original data has remained untampered. We reserve the right to utilize these timestamps as judicial evidence to pursue legal action against any unauthorized use or infringement.</p>
+<p class="zh">数字化记录的整全性确保了原始数据自诞生起便未被篡改。本人保留利用可信时间戳作为司法证据，依法追究一切未经授权使用或侵权行为的权利。</p>
+</section>
+
+<hr class="dot-divider" />
+
+<section>
+<p class="en">Notice: Content on this site is copyright protected. View the <a href="https://kingsleyqi.com/blog/markdown-style-guide/" style="color: inherit; text-decoration: underline;">LOGO Authentication & Copyright Protocol</a>.</p>
+<p class="zh">说明：本站内容受版权保护，查看 <a href="https://kingsleyqi.com/blog/markdown-style-guide/" style="color: inherit; text-decoration: underline;">LOGO 存证与版权协议</a>。</p>
+</section>
 
 </div>
 
 <style>
-  /* 强制应用全局一致的格调样式 */
   .bilingual-blog section {
     margin-bottom: 3.5rem;
   }
 
-  /* 英文：衬线、斜体、浅灰色 */
   .bilingual-blog .en {
     font-family: Georgia, serif;
     font-style: italic;
@@ -43,7 +66,6 @@ heroImage: "/blog-placeholder-7.jpg"
     margin-bottom: 0.6rem;
   }
 
-  /* 中文：细体、大间距、深灰色 */
   .bilingual-blog .zh {
     font-size: 1.05rem;
     color: #333;
