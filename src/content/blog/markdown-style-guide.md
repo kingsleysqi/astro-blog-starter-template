@@ -1,56 +1,69 @@
 ---
-title: "Copyright & TSA Notice | 版权声明与存证公示"
-description: "Legal notice regarding the original LOGO design and content ownership for kingsleyqi.com and kingsleyqi.cn."
-pubDate: "Mar 15 2026"
-heroImage: "/blog-placeholder-copyright.jpg"
+title: "About Me | 关于我"
+description: "A reflection on the search for order, the vanishing spine, and the mercy of moistness."
+pubDate: "Feb 01 2026"
+heroImage: "/blog-placeholder-about.jpg"
 ---
 
 <div class="bilingual-blog">
 
 <section>
-<p class="en">The personal LOGO design used on this site is an original work by the author and has been officially recorded through the <strong>UniTrust TimeStamp Authority (TSA)</strong>. This digital certification provides conclusive legal evidence of the work's existence and integrity from the moment of registration.</p>
-<p class="zh">本站所使用的个人 LOGO 设计作品由作者原创，并已通过<strong>联合信任时间戳服务中心（TSA）</strong>完成版权存证。该数字化认证为作品自申请时刻起的真实存在性与完整性提供了确凿的法律证据。</p>
+<p class="en">The world is constantly chasing "fullness"—the overflow of words, the pervasive noise, and the desire to fill every inch of void.</p>
+<p class="zh">世人皆在追逐“满”。满溢的话语、无孔不入的喧嚣，以及那极试试图填补每一寸虚空的欲望。</p>
 </section>
 
 <section>
-<p class="en">
-<strong>LOGO Authentication Details:</strong><br/>
-• Work Title: Personal LOGO Design<br/>
-• Certificate No: TSA-11-20260315155929599<br/>
-• Timestamp: 2026-03-15 05:59:14 (UTC+8)<br/>
-• Authority: UniTrust TimeStamp Authority<br/>
-• Authorized Domains: Kingsleyqi.com / Kingsleyqi.cn
-</p>
-<p class="zh">
-<strong>LOGO 存证详情：</strong><br/>
-• 作品名称：个人LOGO设计<br/>
-• 存证编号：TSA-11-20260315155929599<br/>
-• 存证时间：2026-03-15 05:59:14 (UTC+8)<br/>
-• 存证机构：联合信任时间戳服务中心<br/>
-• 授权域名：Kingsleyqi.com / Kingsleyqi.cn
-</p>
+<p class="en">Yet, the most moving presence often begins with a <strong>restrained retreat</strong>.</p>
+<p class="zh">然而，最动人心弦的存在，往往始于一种<strong>克制的谦让</strong>。</p>
 </section>
 
 <hr class="dot-divider" />
 
 <section>
-<p class="en">Beyond the authenticated LOGO, all original text, imagery, and code published on this site are protected. Redistribution requires clear attribution to "kq" with a direct link to the original source. Any commercial use or derivative modification without explicit written consent is strictly prohibited.</p>
-<p class="zh">除上述已存证的 LOGO 外，本站发布的各类原创文字、图片及代码内容均受版权保护。转载须明确注明作者为“kq”并保留原始网页链接。未经书面许可，严禁将本站内容用于商业用途或进行任何形式的歪曲洗稿。</p>
-</section>
-
-<section>
-<p class="en">The integrity of the digital record ensures that the original data has remained untampered. We reserve the right to utilize these timestamps as judicial evidence to pursue legal action against any unauthorized use or infringement.</p>
-<p class="zh">数字化记录的整全性确保了原始数据自诞生起便未被篡改。本人保留利用可信时间戳作为司法证据，依法追究一切未经授权使用或侵权行为的权利。</p>
+<h3 class="en">The Vanishing Spine</h3>
+<h3 class="zh">隐去的脊梁</h3>
+<p class="en">In a place where a pillar should stand, we chose to let it vanish. This is not weakness, but a conscious clarity of "non-contention." It tells us that what truly supports a world is never the visible spins, but the transitions and character maintained even in its absence.</p>
+<p class="zh">在一个理应撑起支柱的位置，我选择让它隐去。这并非软弱，而是一种“不争”的清醒。它告诉我们：真正能支撑起一个世界的，从来不是那根外显的脊梁，而是那份在缺失中依然守住的转折与风骨。</p>
 </section>
 
 <hr class="dot-divider" />
 
+<section>
+<h3 class="en">The Mercy of Moistness</h3>
+<h3 class="zh">润物的慈悲</h3>
+<p class="en">There should always be something "moist" in life. It is not the sharpness of a blade, but the mellow wholeness left by water on stone. This texture signifies a deep reconciliation with the world: layer upon layer of warmth wrapped around the hardest parts of reason.</p>
+<p class="zh">生命里总该有些东西是“润”的。它不是刀刃的锋利，而是水滴在岩石上留下的圆融。这种质感意味着一种与世界的深度和解：在理性最坚硬的地方，依然包裹着层层温润。</p>
+</section>
+
+<hr class="dot-divider" />
+
+<section>
+<h3 class="en">The Invitation of the Unfinished</h3>
+<h3 class="zh">未完之邀</h3>
+<p class="en">Completeness is precious, but an unfinished circle possesses more vitality. It leaves an opening for the wind to pass and for the soul to enter. Two symbols gaze at each other in silence, never touching, yet reaching a balance within that invisible negative space.</p>
+<p class="zh">圆满固然可贵，但未竟之圆却更具生命力。因为它留出了一个缺口，让清风可以穿行，让灵魂可以进入。两个符号在无声中遥遥相望，互不干涉，却在中间那抹看不见的负空间里，达成了一种平衡。</p>
+</section>
+
+<hr class="dot-divider" />
+
+<section>
+<p class="en">Notice: Content on this site is copyright protected. View the <a href="https://kingsleyqi.com/blog/markdown-style-guide/" style="color: inherit; text-decoration: underline;">LOGO Authentication & Copyright Protocol</a>.</p>
+<p class="zh">说明：本站内容受版权保护，查看 <a href="https://kingsleyqi.com/blog/markdown-style-guide/" style="color: inherit; text-decoration: underline;">LOGO 存证与版权协议</a>。</p>
+</section>
+
+<hr class="dot-divider" />
 
 </div>
 
 <style>
   .bilingual-blog section {
     margin-bottom: 3.5rem;
+  }
+
+  .bilingual-blog h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
   }
 
   .bilingual-blog .en {
