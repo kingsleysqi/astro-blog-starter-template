@@ -2,7 +2,7 @@
 title: "Who Am I | 我是谁：在不确定中构建自我"
 description: "当标签失效、表达变得可疑，一个关于自我认同与持续生成的思考记录。"
 pubDate: "Mar 24 2026"
-heroImage: "/blog-placeholder-3.jpg"
+heroImage: "/blog-placeholder-8.jpg"
 ---
 
 <div class="bilingual-blog">
